@@ -1,0 +1,10 @@
+ifdef LONG
+INTT = -DLONG
+endif
+
+PCC = g++
+PCFLAGS = -O2 -fopenmp -fcilkplus -fpermissive $(INTT)
+PLFLAGS = -fopenmp -lcilkrts $(LFLAGS)
+
+PCFLAGS = -O2 -fopenmp -DOPENMP -fcilkplus -lcilkrts -fpermissive -w $(INTT)
+PLFLAGS = -fopenmp -DOPENMP -fcilkplus -lcilkrts $(LFLAGS)
