@@ -1,0 +1,11 @@
+ifdef LONG
+INTT = -DLONG
+endif
+
+PCC = g++
+PCFLAGS = -O2 -fopenmp -fcilkplus -fpermissive $(INTT)
+PLFLAGS = -fopenmp -lcilkrts -lrt -lm -lclustering $(LFLAGS)
+#MANAGER = task_manager.o
+MANAGER = utilization_calculator.o
+
+ADDITIONAL_LINKS = $(MANAGER) single_use_barrier.o timespec_functions.o -Wl,-rpath,/home/joey/cilkplus-install/lib64
