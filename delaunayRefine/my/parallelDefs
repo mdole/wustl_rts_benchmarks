@@ -3,5 +3,5 @@ INTT = -DLONG
 endif
 
 PCC = g++
-PCFLAGS = -O2 -fopenmp -fcilkplus -I /home/joey/cilkplus-install/include $(INTT)
+PCFLAGS = -O2 -fopenmp -fcilkplus $(INTT)
 PLFLAGS = -fopenmp -lcilkrts $(LFLAGS)

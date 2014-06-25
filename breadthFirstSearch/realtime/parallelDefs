@@ -3,7 +3,7 @@ INTT = -DLONG
 endif
 
 PCC = g++
-PCFLAGS = -O2 -fopenmp -fcilkplus -I /home/joey/cilkplus-install/include $(INTT)
+PCFLAGS = -O2 -fopenmp -fcilkplus $(INTT)
 PLFLAGS = -fopenmp -lcilkrts -lrt -lm -lclustering $(LFLAGS)
 MANAGER = task_manager.o
 #MANAGER = utilization_calculator.o
