@@ -31,10 +31,10 @@
 #include "unionFind.h"
 using namespace std;
 
-#if defined(CILK) || defined(CILKP) || defined(OPENMP)
+#if defined(CILK) || defined(CILKP)
 #include "sampleSort.h"
-//#elif defined(OPENMP)  // LINE REMOVED
-//#include "stlParallelSort.h"  // LINE REMOVED
+#elif defined(OPENMP)
+#include "stlParallelSort.h"
 #else
 #include "serialSort.h"
 #endif

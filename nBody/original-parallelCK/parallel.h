@@ -1,6 +1,3 @@
-//#define OPENMP
-#define CILKP
-
 // cilkarts cilk++
 #if defined(CILK)
 #include <cilk.h>

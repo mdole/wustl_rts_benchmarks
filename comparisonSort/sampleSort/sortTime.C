@@ -46,7 +46,7 @@ void timeSort(T* A, intT n, CMP f, int rounds, bool permute, char* outFile) {
   parallel_for (intT i=0; i < n; i++) B[i] = A[i];
   compSort(B, n, f); // run one sort to "warm things up"
   for (int i=0; i < rounds; i++) {
-    parallel_for (intT i=0; i < n; i++) B[i] = A[i];
+    parallel_for (intT j=0; j < n; j++) B[j] = A[j];
     startTime();
     compSort(B, n, f);
     nextTimeN();
