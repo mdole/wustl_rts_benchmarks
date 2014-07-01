@@ -30,7 +30,7 @@
 #include "parallel.h"
 #include "nbody.h"
 
-#include "task.h"
+#include "../../../runtime/task.h"
 
 using namespace std;
 using namespace benchIO;

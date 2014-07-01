@@ -29,7 +29,7 @@
 #include "sequenceIO.h"
 #include "parseCommandLine.h"
 
-#include "task.h"
+#include "../../../runtime/task.h"
 
 using namespace std;
 using namespace benchIO;

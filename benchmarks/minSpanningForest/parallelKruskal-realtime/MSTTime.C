@@ -31,7 +31,7 @@
 #include "parseCommandLine.h"
 #include "MST.h"
 
-#include "task.h"
+#include "../../../runtime/task.h"
 
 using namespace std;
 using namespace benchIO;

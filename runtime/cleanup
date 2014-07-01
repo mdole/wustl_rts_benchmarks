@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#make sure there's nothing leftover running
+pkill clustering_launcher
+pkill synthetic_task
+pkill exp_run
+pkill python
+
+#for rootDir in "/export/austen/home/kieselbachk/aug5util20-100n100" "/export/austen/home/kieselbachk/core36aug5util20-100" "/export/austen/home/kieselbachk/core36aug2util05-90"
+for rootDir in "/export/austen/home/kieselbachk/core36aug5util20-100" "/export/austen/home/kieselbachk/core36aug2util05-90"
+#for rootDir in "/export/austen/home/kieselbachk/aug5util20-100n100"
+do
+
+	#delete the contents of the result folders
+	python delete_results.py $rootDir/bestaug5util20 $rootDir/bestaug5util30 $rootDir/bestaug5util40 $rootDir/bestaug5util50 $rootDir/bestaug5util60 $rootDir/bestaug5util70 $rootDir/bestaug5util80 
+	#python delete_results.py $rootDir/bestaug5util70 $rootDir/bestaug5util60
+
+done
