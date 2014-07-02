@@ -1,0 +1,91 @@
+#!/bin/bash
+#Run all the simulations in the folders 
+
+#procedure - run from the experiments folder
+
+#make sure there's nothing leftover running
+pkill clustering_launcher
+pkill synthetic_task
+pkill exp_run
+pkill python
+
+rootDir=/export/austen/home/kieselbachk/aug5util20-100n100
+
+#step 1
+#this for loop determines which directories are looped over
+#for expFolder in bestaug5util20 bestaug5util30 bestaug5util40 bestaug5util50 bestaug5util60 bestaug5util70 bestaug5util80 # 
+for expFolder in bestaug5util80 bestaug5util70 bestaug5util60 bestaug5util50 bestaug5util40 bestaug5util30 bestaug5util20 # 
+
+do
+    expDir=$rootDir/$expFolder
+
+	while [ 1 ]
+	do	
+	#Find all tasksets in $expDir that have no result data
+	toDo=$(./check $expDir 1 100)
+
+	one=$(echo $toDo | cut --delimiter=' ' -f1)
+	toDo=$(echo $toDo | cut --delimiter=' ' -f1 --complement)
+	
+	#if one == toDo then toDo was the empty string, and we should be done
+	if [[ $one == $toDo ]]; then
+
+		doubleCheck=$(./check $expDir 1 100)
+		if [[ $doubleCheck == "" ]]; then
+			echo "Done with $expDir"
+			break
+		fi
+
+	fi
+
+	#We grab a second and third taskset to do simultaneously
+	two=$(echo $toDo | cut --delimiter=' ' -f1)
+	toDo=$(echo $toDo | cut --delimiter=' ' -f1 --complement)
+
+	three=$(echo $toDo | cut --delimiter=' ' -f1)
+	toDo=$(echo $toDo | cut --delimiter=' ' -f1 --complement)
+
+	#step4
+	#create helper programs that actually run each taskset
+	#then, wait until they all return
+	
+	sleep 10s	
+
+	echo "Doing $expDir taskset $one"
+	./exp_run $one "$expDir" 12 23 &
+	PID_0=$!
+
+	sleep 10s	
+
+	if [[ $two != $one ]]; then
+		echo "Doing $expDir taskset $two"
+		./exp_run $two "$expDir" 24 35 &
+		PID_1=$!
+	fi
+
+	sleep 10s
+
+	if [[ $three != $one && $three != $two ]]; then
+		echo "Doing $expDir taskset $three"
+		./exp_run $three "$expDir" 36 47 &
+		PID_2=$!
+	fi
+
+	#Wait for each to finish 	
+	wait $PID_0
+	
+	if [[ $two != $one ]]; then
+	wait $PID_1
+	fi
+
+	if [[ $three != $one && $three != $two ]]; then
+	wait $PID_2
+	fi
+
+
+	done
+
+done
+
+python aggregate_results.py experiment_summary.txt $rootDir/bestaug5util20 $rootDir/bestaug5util30 $rootDir/bestaug5util40 $rootDir/bestaug5util50 $rootDir/bestaug5util60 $rootDir/bestaug5util70 $rootDir/bestaug5util80 # 
+

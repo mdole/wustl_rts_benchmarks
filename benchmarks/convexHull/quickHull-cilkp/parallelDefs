@@ -3,5 +3,5 @@ INTT = -DLONG
 endif
 
 PCC = g++
-PCFLAGS = -O2 -fcilkplus $(INTT)
-PLFLAGS = -lcilkrts $(LFLAGS)
+PCFLAGS = -O2 -fopenmp -fcilkplus $(INTT)
+PLFLAGS = -fopenmp -lcilkrts $(LFLAGS)

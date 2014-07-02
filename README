@@ -1,0 +1,7 @@
+THIS IS NOT A COMPLETE README YET.
+
+NOTES
+
+cilkplus-install MUST be in the home directory of the logged-in user.
+
+cd into each benchmark and type "make" (note: NOT sudo make) to make the benchmark.

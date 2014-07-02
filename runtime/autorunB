@@ -1,0 +1,53 @@
+#!/bin/bash
+#Run all the simulations in the folders 
+
+#procedure - run from the experiments folder
+
+#make sure there's nothing leftover running
+pkill clustering_launcher
+pkill synthetic_task
+pkill exp_run
+pkill python
+
+rootDir=/export/austen/home/kieselbachk/aug5util20-100n100
+
+#step 1
+#this for loop determines which directories are looped over
+for expFolder in bestaug5util50 bestaug5util60  
+
+do
+    expDir=$rootDir/$expFolder
+
+	while [ 1 ]
+	do	
+	#Find all tasksets in $expDir that have no result data
+	toDo=$(./check $expDir 1 100)
+
+	one=$(echo $toDo | cut --delimiter=' ' -f1)
+	toDo=$(echo $toDo | cut --delimiter=' ' -f1 --complement)
+	
+	#if one == toDo then toDo was the empty string, and we should be done
+	if [[ $one == $toDo ]]; then
+
+		doubleCheck=$(./check $expDir 1 100)
+		if [[ $doubleCheck == "" ]]; then
+			echo "Done with $expDir"
+			break
+		fi
+
+	fi
+
+	#step4
+	#create helper programs that actually run each taskset
+	#then, wait until they all return
+	
+	sleep 10s
+
+	echo "Doing $expDir taskset $one"
+	./exp_run $one "$expDir" 24 35
+
+
+	done
+
+done
+

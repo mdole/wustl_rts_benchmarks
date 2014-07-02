@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#Invoke a program on a sequence of tasksets in directory dir using
+#the range of processors from start_proc to end_proc
+
+i=$1
+expDir=$2
+start_proc=$3
+end_proc=$4
+
+n=64 #1 64 128 256 512 1024
+#n=1024 #1 64 128 256 512 1024
+total_time=$(expr 65536 \* 5)
+time_scale=$(expr 999999 / $n + 1)
+
+mkdir -p $expDir/taskset$i/result
+rm $expDir/taskset$i/result/* &> /dev/null
+
+python synthetic_rtpt_generator.py $expDir/taskset$i/result/synthetic_taskset $expDir/taskset$i $start_proc $end_proc $total_time $time_scale
+
+./clustering_launcher $expDir/taskset$i/result/synthetic_taskset else $expDir/taskset$i/result
+#./clustering_launcher $expDir/taskset$i/result/synthetic_taskset socket $expDir/taskset$i/result
+#./clustering_launcher $expDir/taskset$i/result/synthetic_taskset balance $expDir/taskset$i/result
+#./clustering_launcher $expDir/taskset$i/result/synthetic_taskset threshold $expDir/taskset$i/result
+
