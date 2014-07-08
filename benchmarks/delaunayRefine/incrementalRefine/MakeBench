@@ -61,7 +61,7 @@ $(TASK)Util : $(TASK).o $(OBJS)
 	$(PCC) $(PLFLAGS) -L ../../../runtime -lrt -lm -lclustering -o $@ $(TASK).o $(OBJS) ../../../runtime/utilization_calculator.o ../../../runtime/single_use_barrier.o ../../../runtime/timespec_functions.o -Wl,-rpath,$(HOME)/cilkplus-install/lib64
 
 clean :
-	rm -f $(BNCHMRK) $(TASK) *.o *.pyc
+	rm -f $(BNCHMRK) $(TASK) $(TASK)Util *.o *.pyc
 
 cleansrc :
 	make -s clean
