@@ -1,0 +1,210 @@
+PBBS-time: 0.00392
+
+PBBS-time: 0.00351
+
+PBBS-time: 0.00443
+
+PBBS-time: 0.00355
+
+PBBS-time: 0.00492
+
+PBBS-time: 0.0038
+
+PBBS-time: 0.00328
+
+PBBS-time: 0.00332
+
+PBBS-time: 0.00373
+
+PBBS-time: 0.00364
+
+PBBS-time: 0.00383
+
+PBBS-time: 0.00493
+
+PBBS-time: 0.00346
+
+PBBS-time: 0.00473
+
+PBBS-time: 0.0035
+
+PBBS-time: 0.00368
+
+PBBS-time: 0.00376
+
+PBBS-time: 0.00416
+
+PBBS-time: 0.00334
+
+PBBS-time: 0.00423
+
+PBBS-time: 0.00359
+
+PBBS-time: 0.00377
+
+PBBS-time: 0.00373
+
+PBBS-time: 0.00333
+
+PBBS-time: 0.00393
+
+PBBS-time: 0.00523
+
+PBBS-time: 0.0036
+
+PBBS-time: 0.00344
+
+PBBS-time: 0.00359
+
+PBBS-time: 0.00351
+
+PBBS-time: 0.00344
+
+PBBS-time: 0.0043
+
+PBBS-time: 0.00373
+
+PBBS-time: 0.00355
+
+PBBS-time: 0.00356
+
+PBBS-time: 0.00363
+
+PBBS-time: 0.00333
+
+PBBS-time: 0.00422
+
+PBBS-time: 0.00369
+
+PBBS-time: 0.0191
+
+PBBS-time: 0.00682
+
+PBBS-time: 0.00314
+
+PBBS-time: 0.00338
+
+PBBS-time: 0.00317
+
+PBBS-time: 0.00355
+
+PBBS-time: 0.00413
+
+PBBS-time: 0.00373
+
+PBBS-time: 0.00358
+
+PBBS-time: 0.00349
+
+PBBS-time: 0.00355
+
+PBBS-time: 0.00341
+
+PBBS-time: 0.00385
+
+PBBS-time: 0.00378
+
+PBBS-time: 0.00351
+
+PBBS-time: 0.00347
+
+PBBS-time: 0.00351
+
+PBBS-time: 0.00425
+
+PBBS-time: 0.00337
+
+PBBS-time: 0.00379
+
+PBBS-time: 0.00377
+
+PBBS-time: 0.00399
+
+PBBS-time: 0.00332
+
+PBBS-time: 0.00498
+
+PBBS-time: 0.00436
+
+PBBS-time: 0.00444
+
+PBBS-time: 0.00436
+
+PBBS-time: 0.00388
+
+PBBS-time: 0.00346
+
+PBBS-time: 0.00493
+
+PBBS-time: 0.00354
+
+PBBS-time: 0.00426
+
+PBBS-time: 0.00429
+
+PBBS-time: 0.00355
+
+PBBS-time: 0.00335
+
+PBBS-time: 0.00376
+
+PBBS-time: 0.00349
+
+PBBS-time: 0.00381
+
+PBBS-time: 0.00327
+
+PBBS-time: 0.00413
+
+PBBS-time: 0.00358
+
+PBBS-time: 0.0037
+
+PBBS-time: 0.0034
+
+PBBS-time: 0.00339
+
+PBBS-time: 0.00363
+
+PBBS-time: 0.00373
+
+PBBS-time: 0.00381
+
+PBBS-time: 0.00436
+
+PBBS-time: 0.00362
+
+PBBS-time: 0.00351
+
+PBBS-time: 0.00359
+
+PBBS-time: 0.00372
+
+PBBS-time: 0.00354
+
+PBBS-time: 0.00367
+
+PBBS-time: 0.00381
+
+PBBS-time: 0.00409
+
+PBBS-time: 0.00406
+
+PBBS-time: 0.00434
+
+PBBS-time: 0.00321
+
+PBBS-time: 0.00374
+
+PBBS-time: 0.00346
+
+0.006000000 secs <= obs < 0.007000000 secs, count: 9
+0.007000000 secs <= obs < 0.008000000 secs, count: 61
+0.008000000 secs <= obs < 0.009000000 secs, count: 23
+0.009000000 secs <= obs < 0.010000000 secs, count: 4
+0.011000000 secs <= obs < 0.012000000 secs, count: 1
+0.017000000 secs <= obs < 0.018000000 secs, count: 1
+0.024000000 secs <= obs < 0.025000000 secs, count: 1
+Max Observation: 0.024132058 secs
+
+0.001000000 | 0.024132058 | 0.008017790
