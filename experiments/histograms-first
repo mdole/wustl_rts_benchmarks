@@ -1,0 +1,64 @@
+#!/bin/bash
+
+../benchmarks/breadthFirstSearch/deterministicBFS/BFSTaskUtil 0 15 0 1000000 20 ../benchmarks/breadthFirstSearch/graphData/data/size1 > BFS-first-1.txt
+../benchmarks/breadthFirstSearch/deterministicBFS/BFSTaskUtil 0 15 0 1000000 20 ../benchmarks/breadthFirstSearch/graphData/data/size2 > BFS-first-2.txt
+../benchmarks/breadthFirstSearch/deterministicBFS/BFSTaskUtil 0 15 0 1000000 20 ../benchmarks/breadthFirstSearch/graphData/data/size3 > BFS-first-3.txt
+../benchmarks/breadthFirstSearch/deterministicBFS/BFSTaskUtil 0 15 0 1000000 20 ../benchmarks/breadthFirstSearch/graphData/data/size4 > BFS-first-4.txt
+../benchmarks/breadthFirstSearch/deterministicBFS/BFSTaskUtil 0 15 0 1000000 20 ../benchmarks/breadthFirstSearch/graphData/data/size5 > BFS-first-5.txt
+../benchmarks/breadthFirstSearch/deterministicBFS/BFSTaskUtil 0 15 0 1000000 20 ../benchmarks/breadthFirstSearch/graphData/data/size6 > BFS-first-6.txt
+
+../benchmarks/comparisonSort/sampleSort-cilkp/sortTaskUtil 0 15 0 1000000 20 ../benchmarks/comparisonSort/sequenceData/data/size1 > sort-first-1.txt
+../benchmarks/comparisonSort/sampleSort-cilkp/sortTaskUtil 0 15 0 1000000 20 ../benchmarks/comparisonSort/sequenceData/data/size2 > sort-first-2.txt
+../benchmarks/comparisonSort/sampleSort-cilkp/sortTaskUtil 0 15 0 1000000 20 ../benchmarks/comparisonSort/sequenceData/data/size3 > sort-first-3.txt
+../benchmarks/comparisonSort/sampleSort-cilkp/sortTaskUtil 0 15 0 1000000 20 ../benchmarks/comparisonSort/sequenceData/data/size4 > sort-first-4.txt
+../benchmarks/comparisonSort/sampleSort-cilkp/sortTaskUtil 0 15 0 1000000 20 ../benchmarks/comparisonSort/sequenceData/data/size5 > sort-first-5.txt
+../benchmarks/comparisonSort/sampleSort-cilkp/sortTaskUtil 0 15 0 1000000 20 ../benchmarks/comparisonSort/sequenceData/data/size6 > sort-first-6.txt
+
+../benchmarks/convexHull/quickHull-cilkp/hullTaskUtil 0 15 0 1000000 20 ../benchmarks/convexHull/geometryData/data/size1 > hull-first-1.txt
+../benchmarks/convexHull/quickHull-cilkp/hullTaskUtil 0 15 0 1000000 20 ../benchmarks/convexHull/geometryData/data/size2 > hull-first-2.txt
+../benchmarks/convexHull/quickHull-cilkp/hullTaskUtil 0 15 0 1000000 20 ../benchmarks/convexHull/geometryData/data/size3 > hull-first-3.txt
+../benchmarks/convexHull/quickHull-cilkp/hullTaskUtil 0 15 0 1000000 20 ../benchmarks/convexHull/geometryData/data/size4 > hull-first-4.txt
+../benchmarks/convexHull/quickHull-cilkp/hullTaskUtil 0 15 0 1000000 20 ../benchmarks/convexHull/geometryData/data/size5 > hull-first-5.txt
+../benchmarks/convexHull/quickHull-cilkp/hullTaskUtil 0 15 0 1000000 20 ../benchmarks/convexHull/geometryData/data/size6 > hull-first-6.txt
+
+../benchmarks/delaunayRefine/incrementalRefine/refineTaskUtil 0 15 0 1000000 20 ../benchmarks/delaunayRefine/geometryData/data/size1 > refine-first-1.txt
+../benchmarks/delaunayRefine/incrementalRefine/refineTaskUtil 0 15 0 1000000 20 ../benchmarks/delaunayRefine/geometryData/data/size2 > refine-first-2.txt
+../benchmarks/delaunayRefine/incrementalRefine/refineTaskUtil 0 15 0 1000000 20 ../benchmarks/delaunayRefine/geometryData/data/size3 > refine-first-3.txt
+../benchmarks/delaunayRefine/incrementalRefine/refineTaskUtil 0 15 0 1000000 20 ../benchmarks/delaunayRefine/geometryData/data/size4 > refine-first-4.txt
+../benchmarks/delaunayRefine/incrementalRefine/refineTaskUtil 0 15 0 1000000 20 ../benchmarks/delaunayRefine/geometryData/data/size5 > refine-first-5.txt
+../benchmarks/delaunayRefine/incrementalRefine/refineTaskUtil 0 15 0 1000000 20 ../benchmarks/delaunayRefine/geometryData/data/size6 > refine-first-6.txt
+
+../benchmarks/dictionary/deterministicHash/dictTaskUtil 0 15 0 1000000 20 ../benchmarks/dictionary/sequenceData/data/size1 > dict-first-1.txt
+../benchmarks/dictionary/deterministicHash/dictTaskUtil 0 15 0 1000000 20 ../benchmarks/dictionary/sequenceData/data/size2 > dict-first-2.txt
+../benchmarks/dictionary/deterministicHash/dictTaskUtil 0 15 0 1000000 20 ../benchmarks/dictionary/sequenceData/data/size3 > dict-first-3.txt
+../benchmarks/dictionary/deterministicHash/dictTaskUtil 0 15 0 1000000 20 ../benchmarks/dictionary/sequenceData/data/size4 > dict-first-4.txt
+../benchmarks/dictionary/deterministicHash/dictTaskUtil 0 15 0 1000000 20 ../benchmarks/dictionary/sequenceData/data/size5 > dict-first-5.txt
+../benchmarks/dictionary/deterministicHash/dictTaskUtil 0 15 0 1000000 20 ../benchmarks/dictionary/sequenceData/data/size6 > dict-first-6.txt
+
+../benchmarks/maximalIndependentSet/incrementalMIS/MISTaskUtil 0 15 0 1000000 20 ../benchmarks/maximalIndependentSet/graphData/data/size1 > MIS-first-1.txt
+../benchmarks/maximalIndependentSet/incrementalMIS/MISTaskUtil 0 15 0 1000000 20 ../benchmarks/maximalIndependentSet/graphData/data/size2 > MIS-first-2.txt
+../benchmarks/maximalIndependentSet/incrementalMIS/MISTaskUtil 0 15 0 1000000 20 ../benchmarks/maximalIndependentSet/graphData/data/size3 > MIS-first-3.txt
+../benchmarks/maximalIndependentSet/incrementalMIS/MISTaskUtil 0 15 0 1000000 20 ../benchmarks/maximalIndependentSet/graphData/data/size4 > MIS-first-4.txt
+../benchmarks/maximalIndependentSet/incrementalMIS/MISTaskUtil 0 15 0 1000000 20 ../benchmarks/maximalIndependentSet/graphData/data/size5 > MIS-first-5.txt
+../benchmarks/maximalIndependentSet/incrementalMIS/MISTaskUtil 0 15 0 1000000 20 ../benchmarks/maximalIndependentSet/graphData/data/size6 > MIS-first-6.txt
+
+../benchmarks/minSpanningForest/parallelKruskal/MSTTaskUtil 0 15 0 1000000 20 ../benchmarks/minSpanningForest/graphData/data/size1 > MST-first-1.txt
+../benchmarks/minSpanningForest/parallelKruskal/MSTTaskUtil 0 15 0 1000000 20 ../benchmarks/minSpanningForest/graphData/data/size2 > MST-first-2.txt
+../benchmarks/minSpanningForest/parallelKruskal/MSTTaskUtil 0 15 0 1000000 20 ../benchmarks/minSpanningForest/graphData/data/size3 > MST-first-3.txt
+../benchmarks/minSpanningForest/parallelKruskal/MSTTaskUtil 0 15 0 1000000 20 ../benchmarks/minSpanningForest/graphData/data/size4 > MST-first-4.txt
+../benchmarks/minSpanningForest/parallelKruskal/MSTTaskUtil 0 15 0 1000000 20 ../benchmarks/minSpanningForest/graphData/data/size5 > MST-first-5.txt
+../benchmarks/minSpanningForest/parallelKruskal/MSTTaskUtil 0 15 0 1000000 20 ../benchmarks/minSpanningForest/graphData/data/size6 > MST-first-6.txt
+
+../benchmarks/nBody/parallelCK/nbodyTaskUtil 0 15 0 1000000 20 ../benchmarks/nBody/geometryData/data/size1 > nbody-first-1.txt
+../benchmarks/nBody/parallelCK/nbodyTaskUtil 0 15 0 1000000 20 ../benchmarks/nBody/geometryData/data/size2 > nbody-first-2.txt
+../benchmarks/nBody/parallelCK/nbodyTaskUtil 0 15 0 1000000 20 ../benchmarks/nBody/geometryData/data/size3 > nbody-first-3.txt
+../benchmarks/nBody/parallelCK/nbodyTaskUtil 0 15 0 1000000 20 ../benchmarks/nBody/geometryData/data/size4 > nbody-first-4.txt
+../benchmarks/nBody/parallelCK/nbodyTaskUtil 0 15 0 1000000 20 ../benchmarks/nBody/geometryData/data/size5 > nbody-first-5.txt
+../benchmarks/nBody/parallelCK/nbodyTaskUtil 0 15 0 1000000 20 ../benchmarks/nBody/geometryData/data/size6 > nbody-first-6.txt
+
+../benchmarks/removeDuplicates/deterministicHash/remDupsTaskUtil 0 15 0 1000000 20 ../benchmarks/removeDuplicates/sequenceData/data/size1 > remDups-first-1.txt
+../benchmarks/removeDuplicates/deterministicHash/remDupsTaskUtil 0 15 0 1000000 20 ../benchmarks/removeDuplicates/sequenceData/data/size2 > remDups-first-2.txt
+../benchmarks/removeDuplicates/deterministicHash/remDupsTaskUtil 0 15 0 1000000 20 ../benchmarks/removeDuplicates/sequenceData/data/size3 > remDups-first-3.txt
+../benchmarks/removeDuplicates/deterministicHash/remDupsTaskUtil 0 15 0 1000000 20 ../benchmarks/removeDuplicates/sequenceData/data/size4 > remDups-first-4.txt
+../benchmarks/removeDuplicates/deterministicHash/remDupsTaskUtil 0 15 0 1000000 20 ../benchmarks/removeDuplicates/sequenceData/data/size5 > remDups-first-5.txt
+../benchmarks/removeDuplicates/deterministicHash/remDupsTaskUtil 0 15 0 1000000 20 ../benchmarks/removeDuplicates/sequenceData/data/size6 > remDups-first-6.txt
