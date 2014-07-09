@@ -3,7 +3,7 @@ all:
 	cd benchmarks; \
 	cd breadthFirstSearch; make& cd ..; \
 	cd comparisonSort; make& cd ..; \
-	cd convexHull; make& cd..; \
+	cd convexHull; make& cd ..; \
 	cd delaunayRefine; make& cd ..; \
 	cd delaunayTriangulation; make& cd ..; \
 	cd dictionary; make& cd ..; \
