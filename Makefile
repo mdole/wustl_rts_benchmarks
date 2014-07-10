@@ -10,6 +10,7 @@ all:
 	cd maximalIndependentSet; make& cd ..; \
 	cd minSpanningForest; make& cd ..; \
 	cd nBody; make& cd ..; \
+	cd rayCast; make& cd ..; \
 	cd removeDuplicates; make& cd ..; \
 	wait; \
 	cd ..
@@ -24,6 +25,7 @@ inputs:
 	cd maximalIndependentSet; make inputs; cd ..; \
 	cd minSpanningForest; make inputs; cd ..; \
 	cd nBody; make inputs; cd ..; \
+	cd rayCast; make inputs; cd ..; \
 	cd removeDuplicates; make inputs; cd ..; \
 	cd ..
 
@@ -39,5 +41,6 @@ clean:
 	cd maximalIndependentSet; make clean; cd ..; \
 	cd minSpanningForest; make clean; cd ..; \
 	cd nBody; make clean; cd ..; \
+	cd rayCast; make clean; cd ..; \
 	cd removeDuplicates; make clean; cd ..; \
 	cd ..
