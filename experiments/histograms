@@ -1,0 +1,47 @@
+#!/bin/bash
+
+../benchmarks/breadthFirstSearch/deterministicBFS-cilkp/BFSTaskUtil 0 15 0 1000 1000 ../benchmarks/breadthFirstSearch/graphData/data/size1 > histo-BFS-1.txt
+../benchmarks/breadthFirstSearch/deterministicBFS-cilkp/BFSTaskUtil 0 15 0 10000 1000 ../benchmarks/breadthFirstSearch/graphData/data/size2 > histo-BFS-2.txt
+../benchmarks/breadthFirstSearch/deterministicBFS-cilkp/BFSTaskUtil 0 15 0 10000 1000 ../benchmarks/breadthFirstSearch/graphData/data/size3 > histo-BFS-3.txt
+../benchmarks/breadthFirstSearch/deterministicBFS-cilkp/BFSTaskUtil 0 15 0 100000 1000 ../benchmarks/breadthFirstSearch/graphData/data/size4 > histo-BFS-4.txt
+../benchmarks/breadthFirstSearch/deterministicBFS-cilkp/BFSTaskUtil 0 15 0 100000 1000 ../benchmarks/breadthFirstSearch/graphData/data/size5 > histo-BFS-5.txt
+../benchmarks/breadthFirstSearch/deterministicBFS-cilkp/BFSTaskUtil 0 15 0 1000000 1000 ../benchmarks/breadthFirstSearch/graphData/data/size6 > histo-BFS-6.txt
+
+../benchmarks/comparisonSort/sampleSort-cilkp/sortTaskUtil 0 15 0 1000 1000 ../benchmarks/comparisonSort/sequenceData/data/size1 > histo-sort-1.txt
+../benchmarks/comparisonSort/sampleSort-cilkp/sortTaskUtil 0 15 0 10000 1000 ../benchmarks/comparisonSort/sequenceData/data/size2 > histo-sort-2.txt
+../benchmarks/comparisonSort/sampleSort-cilkp/sortTaskUtil 0 15 0 10000 1000 ../benchmarks/comparisonSort/sequenceData/data/size3 > histo-sort-3.txt
+../benchmarks/comparisonSort/sampleSort-cilkp/sortTaskUtil 0 15 0 100000 1000 ../benchmarks/comparisonSort/sequenceData/data/size4 > histo-sort-4.txt
+../benchmarks/comparisonSort/sampleSort-cilkp/sortTaskUtil 0 15 0 100000 1000 ../benchmarks/comparisonSort/sequenceData/data/size5 > histo-sort-5.txt
+../benchmarks/comparisonSort/sampleSort-cilkp/sortTaskUtil 0 15 0 1000000 1000 ../benchmarks/comparisonSort/sequenceData/data/size6 > histo-sort-6.txt
+
+../benchmarks/convexHull/quickHull-cilkp/hullTaskUtil 0 15 0 1000 1000 ../benchmarks/convexHull/geometryData/data/size1 > histo-hull-1.txt
+../benchmarks/convexHull/quickHull-cilkp/hullTaskUtil 0 15 0 10000 1000 ../benchmarks/convexHull/geometryData/data/size2 > histo-hull-2.txt
+../benchmarks/convexHull/quickHull-cilkp/hullTaskUtil 0 15 0 10000 1000 ../benchmarks/convexHull/geometryData/data/size3 > histo-hull-3.txt
+../benchmarks/convexHull/quickHull-cilkp/hullTaskUtil 0 15 0 100000 1000 ../benchmarks/convexHull/geometryData/data/size4 > histo-hull-4.txt
+../benchmarks/convexHull/quickHull-cilkp/hullTaskUtil 0 15 0 100000 1000 ../benchmarks/convexHull/geometryData/data/size5 > histo-hull-5.txt
+../benchmarks/convexHull/quickHull-cilkp/hullTaskUtil 0 15 0 1000000 1000 ../benchmarks/convexHull/geometryData/data/size6 > histo-hull-6.txt
+
+../benchmarks/delaunayRefine/incrementalRefine-cilkp/refineTaskUtil 0 15 0 1000 1000 ../benchmarks/delaunayRefine/geometryData/data/size1 > histo-refine-1.txt
+../benchmarks/delaunayRefine/incrementalRefine-cilkp/refineTaskUtil 0 15 0 10000 1000 ../benchmarks/delaunayRefine/geometryData/data/size2 > histo-refine-2.txt
+../benchmarks/delaunayRefine/incrementalRefine-cilkp/refineTaskUtil 0 15 0 10000 1000 ../benchmarks/delaunayRefine/geometryData/data/size3 > histo-refine-3.txt
+../benchmarks/delaunayRefine/incrementalRefine-cilkp/refineTaskUtil 0 15 0 100000 1000 ../benchmarks/delaunayRefine/geometryData/data/size4 > histo-refine-4.txt
+../benchmarks/delaunayRefine/incrementalRefine-cilkp/refineTaskUtil 0 15 0 100000 1000 ../benchmarks/delaunayRefine/geometryData/data/size5 > histo-refine-5.txt
+../benchmarks/delaunayRefine/incrementalRefine-cilkp/refineTaskUtil 0 15 0 1000000 1000 ../benchmarks/delaunayRefine/geometryData/data/size6 > histo-refine-6.txt
+
+../benchmarks/minSpanningForest/parallelKruskal-cilkp/MSTTaskUtil 0 15 0 1000 1000 ../benchmarks/minSpanningForest/graphData/data/size1 > histo-MST-1.txt
+../benchmarks/minSpanningForest/parallelKruskal-cilkp/MSTTaskUtil 0 15 0 10000 1000 ../benchmarks/minSpanningForest/graphData/data/size2 > histo-MST-2.txt
+../benchmarks/minSpanningForest/parallelKruskal-cilkp/MSTTaskUtil 0 15 0 10000 1000 ../benchmarks/minSpanningForest/graphData/data/size3 > histo-MST-3.txt
+../benchmarks/minSpanningForest/parallelKruskal-cilkp/MSTTaskUtil 0 15 0 100000 1000 ../benchmarks/minSpanningForest/graphData/data/size4 > histo-MST-4.txt
+../benchmarks/minSpanningForest/parallelKruskal-cilkp/MSTTaskUtil 0 15 0 100000 1000 ../benchmarks/minSpanningForest/graphData/data/size5 > histo-MST-5.txt
+../benchmarks/minSpanningForest/parallelKruskal-cilkp/MSTTaskUtil 0 15 0 1000000 1000 ../benchmarks/minSpanningForest/graphData/data/size6 > histo-MST-6.txt
+
+../benchmarks/nBody/parallelCK-cilkp/nbodyTaskUtil 0 15 0 1000 1000 ../benchmarks/nBody/geometryData/data/size1 > histo-nbody-1.txt
+../benchmarks/nBody/parallelCK-cilkp/nbodyTaskUtil 0 15 0 10000 1000 ../benchmarks/nBody/geometryData/data/size2 > histo-nbody-2.txt
+../benchmarks/nBody/parallelCK-cilkp/nbodyTaskUtil 0 15 0 10000 1000 ../benchmarks/nBody/geometryData/data/size3 > histo-nbody-3.txt
+../benchmarks/nBody/parallelCK-cilkp/nbodyTaskUtil 0 15 0 100000 1000 ../benchmarks/nBody/geometryData/data/size4 > histo-nbody-4.txt
+../benchmarks/nBody/parallelCK-cilkp/nbodyTaskUtil 0 15 0 100000 1000 ../benchmarks/nBody/geometryData/data/size5 > histo-nbody-5.txt
+../benchmarks/nBody/parallelCK-cilkp/nbodyTaskUtil 0 15 0 1000000 1000 ../benchmarks/nBody/geometryData/data/size6 > histo-nbody-6.txt
+
+../benchmarks/rayCast/kdTree-cilkp/rayTaskUtil 0 15 0 1000000 1000 ../benchmarks/nBody/geometryData/data/happyTriangles ../benchmarks/nBody/geometryData/data/happyRays > histo-ray-happy.txt
+../benchmarks/rayCast/kdTree-cilkp/rayTaskUtil 0 15 0 1000000 1000 ../benchmarks/nBody/geometryData/data/dragonTriangles ../benchmarks/nBody/geometryData/data/dragonRays > histo-ray-dragon.txt
+../benchmarks/rayCast/kdTree-cilkp/rayTaskUtil 0 15 0 1000000 1000 ../benchmarks/nBody/geometryData/data/angelTriangles ../benchmarks/nBody/geometryData/data/angelRays > histo-ray-angel.txt
