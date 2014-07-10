@@ -1,5 +1,4 @@
-//#define OPENMP
-#define CILKP
+#define OPENMP
 
 // cilkarts cilk++
 #if defined(CILK)

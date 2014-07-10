@@ -1,7 +1,8 @@
 all:
 	cd common; make; cd ..; \
 	cd geometryData; make; cd ..; \
-	cd incrementalRefine; make; cd ..; \
+	cd incrementalRefine-cilkp; make; cd ..; \
+	cd incrementalRefine-omp; make; cd ..; \
 
 inputs:
 	./geometryData/uniform -f -s -d 2 20 ./geometryData/data/size1-temp
@@ -26,7 +27,8 @@ inputs:
 clean:
 	cd common; make clean; cd ..; \
 	cd geometryData; make clean; cd ..; \
-	cd incrementalRefine; make clean; cd ..; \
+	cd incrementalRefine-cilkp; make clean; cd ..; \
+	cd incrementalRefine-omp; make clean; cd ..; \
 	rm -f ./geometryData/data/size1-temp
 	rm -f ./geometryData/data/size2-temp
 	rm -f ./geometryData/data/size3-temp

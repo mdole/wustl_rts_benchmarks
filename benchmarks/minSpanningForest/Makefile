@@ -1,7 +1,8 @@
 all:
 	cd common; make; cd ..; \
 	cd graphData; make; cd ..; \
-	cd parallelKruskal; make; cd ..; \
+	cd parallelKruskal-cilkp; make; cd ..; \
+	cd parallelKruskal-omp; make; cd ..; \
 	cd serialMST; make; cd ..; \
 
 inputs:
@@ -27,7 +28,8 @@ inputs:
 clean:
 	cd common; make clean; cd ..; \
 	cd graphData; make clean; cd ..; \
-	cd parallelKruskal; make clean; cd ..; \
+	cd parallelKruskal-cilkp; make clean; cd ..; \
+	cd parallelKruskal-omp; make clean; cd ..; \
 	cd serialMST; make clean; cd ..; \
 	rm -f ./graphData/data/size1
 	rm -f ./graphData/data/size2

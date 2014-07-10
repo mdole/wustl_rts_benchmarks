@@ -1,7 +1,8 @@
 all:
 	cd common; make; cd ..; \
 	cd geometryData; make; cd ..; \
-	cd parallelCK; make; cd ..; \
+	cd parallelCK-cilkp; make; cd ..; \
+	cd parallelCK-omp; make; cd ..; \
 
 inputs:
 	./geometryData/uniform -f -s -d 3 10 ./geometryData/data/size1
@@ -14,7 +15,8 @@ inputs:
 clean:
 	cd common; make clean; cd ..; \
 	cd geometryData; make clean; cd ..; \
-	cd parallelCK; make clean; cd ..; \
+	cd parallelCK-cilkp; make clean; cd ..; \
+	cd parallelCK-omp; make clean; cd ..; \
 	rm -f ./geometryData/data/size1
 	rm -f ./geometryData/data/size2
 	rm -f ./geometryData/data/size3

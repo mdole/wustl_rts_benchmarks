@@ -1,6 +1,7 @@
 all:
 	cd common; make; cd ..; \
-	cd deterministicBFS; make; cd ..; \
+	cd deterministicBFS-cilkp; make; cd ..; \
+	cd deterministicBFS-omp; make; cd ..; \
 	cd graphData; make; cd ..; \
 	cd serialBFS; make; cd ..; \
 
@@ -14,7 +15,8 @@ inputs:
 
 clean:
 	cd common; make clean; cd ..; \
-	cd deterministicBFS; make clean; cd ..; \
+	cd deterministicBFS-cilkp; make clean; cd ..; \
+	cd deterministicBFS-omp; make clean; cd ..; \
 	cd graphData; make clean; cd ..; \
 	cd serialBFS; make clean; cd ..; \
 	rm -f ./graphData/data/size1
