@@ -50,11 +50,11 @@ void timeMST(wghEdgeArray<intT> EA, int rounds, char* outFile) {
   for (int i=0; i < rounds; i++) {
     if (Out.first != NULL) free(Out.first);
     parallel_for (intT i=0; i < m; i++) InE[i] = EA.E[i];
-    startTime();
+    //startTime();
     Out = mst(wghEdgeArray<intT>(InE,n,m));
-    nextTimeN();
+    //nextTimeN();
   }
-  cout << endl;
+  //cout << endl;
   if (outFile != NULL) writeIntArrayToFile(Out.first, Out.second, outFile);
   free(InE);
   free(Out.first);

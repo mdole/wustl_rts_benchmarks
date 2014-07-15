@@ -1,0 +1,3 @@
+./geometryData/uniform -s -d 3 $5 ./geometryData/data/autocar
+./parallelCK-$1/nbodyTaskUtil 0 $2-1 0 $3 $4 ./geometryData/data/autocar
+rm -f ./geometryData/data/autocar

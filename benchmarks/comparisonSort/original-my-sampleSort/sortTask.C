@@ -57,11 +57,11 @@ void timeSort(T* A, intT n, CMP f, int rounds, bool permute, char* outFile) {
   compSort(B, n, f); // run one sort to "warm things up"
   for (int i=0; i < rounds; i++) {
     parallel_for (intT j=0; j < n; j++) B[j] = A[j];
-    startTime();
+    //startTime();
     compSort(B, n, f);
-    nextTimeN();
+    //nextTimeN();
   }
-  cout << endl;
+  //cout << endl;
   if (outFile != NULL) writeSequenceToFile(B, n, outFile);
   delete B; 
 }

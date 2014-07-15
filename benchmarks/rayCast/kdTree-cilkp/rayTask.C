@@ -49,11 +49,11 @@ void timeRayCast(triangles<pointT> T, ray<pointT>* rays, intT nRays,
   intT* m = rayCast(T, rays, nRays);
   for (int i=0; i < rounds; i++) {
     if (m != NULL) free(m);
-    startTime();
+    //startTime();
     m = rayCast(T, rays, nRays);
-    nextTimeN();
+    //nextTimeN();
   }
-  cout << endl;
+  //cout << endl;
   if (outFile != NULL) writeIntArrayToFile(m, nRays, outFile);
   free(m);
 }

@@ -46,11 +46,11 @@ void timeRefine(triangles<point2d> Tri, int rounds, char* outFile) {
   triangles<point2d> R;
   for (int i=0; i < rounds; i++) {
     if (i != 0) R.del();
-    startTime();
+    //startTime();
     R = refine(Tri);
-    nextTimeN();
+    //nextTimeN();
   }
-  cout << endl;
+  //cout << endl;
 
   if (outFile != NULL) writeTrianglesToFile(R, outFile);
   R.del();

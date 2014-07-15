@@ -1,0 +1,3 @@
+./graphData/randLocalGraph -j -d 3 -m $5*5 $5 ./graphData/data/autocar
+./deterministicBFS-$1/BFSTaskUtil 0 $2-1 0 $3 $4 ./graphData/data/autocar
+rm -f ./graphData/data/autocar

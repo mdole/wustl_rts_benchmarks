@@ -8,4 +8,10 @@ cd into each benchmark and type "make" (note: NOT sudo make) to make the benchma
 
 The input files (placed into each benchmark's data folder by the generate-inputs script) are based on the FIRST SET of recommendations (e.g., randomSeq -t double <n> <filename> for comparisonSort) given on each benchmark's page, accessible from http://www.cs.cmu.edu/~pbbs/benchmarks.html. The filename is simply "size#", where # is a (currently) single-digit number. Each size is 10 times bigger than the size before it, and size 6 represents the recommended value of n on the benchmark's page as of 2014-07-07. Note that the files used for actual real-time applications will likely be smaller than size 6, at least with current technology.
 
-The generate-inputs script assumes the benchmark set has already been made.
+Make inputs assumes the benchmark set has already been made.
+
+In each benchmark:
+car: Create And Run
+usage: car <cilkp|omp> <CORES> <BUCKETNS> <NUMTIMES> <N>
+Uses Utilization Calculator
+Assumes program is already made, make inputs not necessary

@@ -15,6 +15,22 @@ all:
 	wait; \
 	cd ..
 
+serial:
+	cd runtime; make&& cd ..; \
+	cd benchmarks; \
+	cd breadthFirstSearch; make&& cd ..; \
+	cd comparisonSort; make&& cd ..; \
+	cd convexHull; make&& cd ..; \
+	cd delaunayRefine; make&& cd ..; \
+	cd delaunayTriangulation; make&& cd ..; \
+	cd dictionary; make&& cd ..; \
+	cd maximalIndependentSet; make&& cd ..; \
+	cd minSpanningForest; make&& cd ..; \
+	cd nBody; make&& cd ..; \
+	cd rayCast; make&& cd ..; \
+	cd removeDuplicates; make&& cd ..; \
+	cd ..
+
 inputs:
 	cd benchmarks; \
 	cd breadthFirstSearch; make inputs; cd ..; \

@@ -50,11 +50,11 @@ void timeNBody(point3d* pts, intT n, int rounds, char* outFile) {
   {parallel_for (intT i=0; i < n; i++) 
       p[i] = new (&pp[i]) particle(pts[i],1.0);}
   for (int i=0; i < rounds; i++) {
-    startTime();
+    //startTime();
     nbody(p, n);
-    nextTimeN();
+    //nextTimeN();
   }
-  cout << endl;
+  //cout << endl;
 
   point3d* O = newA(point3d,n);
   parallel_for(intT i=0; i < n; i++) 

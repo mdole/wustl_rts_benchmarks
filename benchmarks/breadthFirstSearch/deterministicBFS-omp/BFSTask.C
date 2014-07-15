@@ -47,11 +47,11 @@ void timeBFS(graph<intT> G, int rounds, char* outFile) {
   for (int i=0; i < rounds; i++) {
     GN.del();
     GN = G.copy();
-    startTime();
+    //startTime();
     BFS(0, GN);
-    nextTimeN();
+    //nextTimeN();
   }
-  cout << endl;
+  //cout << endl;
   // G.del();  // LINE REMOVED
   intT m = 0;
   for (intT i=0; i < GN.n; i++) m += GN.V[i].degree;

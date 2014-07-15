@@ -45,11 +45,11 @@ void timeHull(point2d* P, intT n, int rounds, char* outFile) {
   _seq<intT> I;
   for (intT i=0; i < rounds; i++) {
     if (i != 0) I.del();
-    startTime();
+    //startTime();
     I = hull(P, n);
-    nextTimeN();
+    //nextTimeN();
   }
-  cout << endl;
+  //cout << endl;
   if (outFile != NULL) writeIntArrayToFile(I.A, I.n, outFile);
 }
 
