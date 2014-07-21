@@ -1,6 +1,6 @@
 cd ../benchmarks/comparisonSort
 
-for i in {25000..300000..25000}
+for i in {25000..500000..25000}
 do
 for j in {1..16..1}
 do
