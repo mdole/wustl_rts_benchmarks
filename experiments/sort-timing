@@ -1,8 +1,8 @@
 cd ../benchmarks/comparisonSort
 
-for i in (25000..300000..25000)
+for i in {25000..300000..25000}
 do
-for j in (1..16..1)
+for j in {1..16..1}
 do
 
 ./car cilkp $j 1000 2000 $i >../../experiments/timing-sort-cilkp-${i}-${j}
