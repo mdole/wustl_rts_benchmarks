@@ -1,0 +1,18 @@
+cd ../benchmarks/comparisonSort
+
+./car cilkp 1 1000 10000 100000 >./timing-sort-cilkp-100k-1
+./car cilkp 2 1000 10000 100000 >./timing-sort-cilkp-100k-2
+./car cilkp 3 1000 10000 100000 >./timing-sort-cilkp-100k-3
+./car cilkp 4 1000 10000 100000 >./timing-sort-cilkp-100k-4
+./car cilkp 5 1000 10000 100000 >./timing-sort-cilkp-100k-5
+./car cilkp 6 1000 10000 100000 >./timing-sort-cilkp-100k-6
+./car cilkp 7 1000 10000 100000 >./timing-sort-cilkp-100k-7
+./car cilkp 8 1000 10000 100000 >./timing-sort-cilkp-100k-8
+./car cilkp 9 1000 10000 100000 >./timing-sort-cilkp-100k-9
+./car cilkp 10 1000 10000 100000 >./timing-sort-cilkp-100k-10
+./car cilkp 11 1000 10000 100000 >./timing-sort-cilkp-100k-11
+./car cilkp 12 1000 10000 100000 >./timing-sort-cilkp-100k-12
+./car cilkp 13 1000 10000 100000 >./timing-sort-cilkp-100k-13
+./car cilkp 14 1000 10000 100000 >./timing-sort-cilkp-100k-14
+./car cilkp 15 1000 10000 100000 >./timing-sort-cilkp-100k-15
+./car cilkp 16 1000 10000 100000 >./timing-sort-cilkp-100k-16
