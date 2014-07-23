@@ -1,8 +1,10 @@
 all:
 	cd common; make; cd ..; \
 	cd graphData; make; cd ..; \
-	cd incrementalMIS; make; cd ..; \
-	cd ndMIS; make; cd ..; \
+	cd incrementalMIS-cilkp; make; cd ..; \
+	cd ndMIS-cilkp; make; cd ..; \
+	cd incrementalMIS-omp; make; cd ..; \
+	cd ndMIS-omp; make; cd ..; \
 	cd serialMIS; make; cd ..; \
 
 inputs:
@@ -16,8 +18,10 @@ inputs:
 clean:
 	cd common; make clean; cd ..; \
 	cd graphData; make clean; cd ..; \
-	cd incrementalMIS; make clean; cd ..; \
-	cd ndMIS; make clean; cd ..; \
+	cd incrementalMIS-cilkp; make clean; cd ..; \
+	cd ndMIS-cilkp; make clean; cd ..; \
+	cd incrementalMIS-omp; make clean; cd ..; \
+	cd ndMIS-omp; make clean; cd ..; \
 	cd serialMIS; make clean; cd ..; \
 	rm -f ./graphData/data/size1
 	rm -f ./graphData/data/size2

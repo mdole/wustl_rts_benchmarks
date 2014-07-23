@@ -1,6 +1,7 @@
 all:
 	cd common; make; cd ..; \
-	cd deterministicHash; make; cd ..; \
+	cd deterministicHash-cilkp; make; cd ..; \
+	cd deterministicHash-omp; make; cd ..; \
 	cd sequenceData; make; cd ..; \
 	cd serialHash; make; cd ..; \
 
@@ -14,7 +15,8 @@ inputs:
 
 clean:
 	cd common; make clean; cd ..; \
-	cd deterministicHash; make clean; cd ..; \
+	cd deterministicHash-omp; make clean; cd ..; \
+	cd deterministicHash-cilkp; make clean; cd ..; \
 	cd sequenceData; make clean; cd ..; \
 	cd serialHash; make clean; cd ..; \
 	rm -f ./sequenceData/data/size1
