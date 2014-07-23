@@ -1,5 +1,5 @@
 ./graphData/randLocalGraph -d 3 -m $5*5 $5 ./graphData/data/autocar-temp
 ./graphData/addWeights ./graphData/data/autocar-temp ./graphData/data/autocar
 rm -f ./graphData/data/autocar-temp
-./parallelKruskal-$1/MSTTaskUtil 0 $2-1 0 $3 $4 ./graphData/data/autocar
+./parallelKruskal-$1/MSTTaskUtil 0 $(($2-1)) 0 $3 $4 ./graphData/data/autocar
 rm -f ./graphData/data/autocar
