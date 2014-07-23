@@ -1,5 +1,5 @@
 ./geometryData/uniform -s -d 2 $5 ./geometryData/data/autocar-temp
 ../delaunayTriangulation/serialDelaunay/delaunay -o ./geometryData/data/autocar ./geometryData/data/autocar-temp
 rm -f ./geometryData/data/autocar-temp
-./incrementalRefine-$1/refineTaskUtil 0 $2-1 0 $3 $4 ./geometryData/data/autocar
+./incrementalRefine-$1/refineTaskUtil 0 $(($2-1)) 0 $3 $4 ./geometryData/data/autocar
 rm -f ./geometryData/data/autocar
