@@ -6,22 +6,41 @@ all:
 	cd serialSort; make; cd ..; \
 
 inputs:
-	./sequenceData/randomSeq -t double 100 ./sequenceData/data/size1
-	./sequenceData/randomSeq -t double 1000 ./sequenceData/data/size2
-	./sequenceData/randomSeq -t double 10000 ./sequenceData/data/size3
-	./sequenceData/randomSeq -t double 100000 ./sequenceData/data/size4
-	./sequenceData/randomSeq -t double 1000000 ./sequenceData/data/size5
-	./sequenceData/randomSeq -t double 10000000 ./sequenceData/data/size6
+	./sequenceData/randomSeq -t double 100 ./sequenceData/data/randomSeq-size1
+	./sequenceData/randomSeq -t double 1000 ./sequenceData/data/randomSeq-size2
+	./sequenceData/randomSeq -t double 10000 ./sequenceData/data/randomSeq-size3
+	./sequenceData/randomSeq -t double 100000 ./sequenceData/data/randomSeq-size4
+	./sequenceData/randomSeq -t double 1000000 ./sequenceData/data/randomSeq-size5
+	./sequenceData/randomSeq -t double 10000000 ./sequenceData/data/randomSeq-size6
+	./sequenceData/exptSeq -t double 100 ./sequenceData/data/exptSeq-size1
+	./sequenceData/exptSeq -t double 1000 ./sequenceData/data/exptSeq-size2
+	./sequenceData/exptSeq -t double 10000 ./sequenceData/data/exptSeq-size3
+	./sequenceData/exptSeq -t double 100000 ./sequenceData/data/exptSeq-size4
+	./sequenceData/exptSeq -t double 1000000 ./sequenceData/data/exptSeq-size5
+	./sequenceData/exptSeq -t double 10000000 ./sequenceData/data/exptSeq-size6
+	./sequenceData/almostSortedSeq -t double 100 ./sequenceData/data/almostSortedSeq-size1
+	./sequenceData/almostSortedSeq -t double 1000 ./sequenceData/data/almostSortedSeq-size2
+	./sequenceData/almostSortedSeq -t double 10000 ./sequenceData/data/almostSortedSeq-size3
+	./sequenceData/almostSortedSeq -t double 100000 ./sequenceData/data/almostSortedSeq-size4
+	./sequenceData/almostSortedSeq -t double 1000000 ./sequenceData/data/almostSortedSeq-size5
+	./sequenceData/almostSortedSeq -t double 10000000 ./sequenceData/data/almostSortedSeq-size6
+	./sequenceData/trigramSeq 100 ./sequenceData/data/trigramSeq-size1
+	./sequenceData/trigramSeq 1000 ./sequenceData/data/trigramSeq-size2
+	./sequenceData/trigramSeq 10000 ./sequenceData/data/trigramSeq-size3
+	./sequenceData/trigramSeq 100000 ./sequenceData/data/trigramSeq-size4
+	./sequenceData/trigramSeq 1000000 ./sequenceData/data/trigramSeq-size5
+	./sequenceData/trigramSeq 10000000 ./sequenceData/data/trigramSeq-size6
 
 clean:
+	make clean-keepinputs
+	make clean-inputs
+
+clean-keepinputs:
 	cd common; make clean; cd ..; \
 	cd sampleSort-cilkp; make clean; cd ..; \
 	cd sampleSort-omp; make clean; cd ..; \
 	cd sequenceData; make clean; cd ..; \
 	cd serialSort; make clean; cd ..; \
-	rm -f ./sequenceData/data/size1
-	rm -f ./sequenceData/data/size2
-	rm -f ./sequenceData/data/size3
-	rm -f ./sequenceData/data/size4
-	rm -f ./sequenceData/data/size5
-	rm -f ./sequenceData/data/size6
+
+clean-inputs:
+	rm -f ./sequenceData/data/*-size*
