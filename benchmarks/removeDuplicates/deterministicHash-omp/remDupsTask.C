@@ -56,17 +56,15 @@ _seq<T> timeRemDups(T* A, intT n, int rounds) {
 
 int init(int argc, char **argv) {
 
-commandLine P(argc, argv,"[+o <outfile>] [+r <rounds>] <infile>");
-iFile = P.getArgument(0);
-oFile = P.getOptionValue("+o");
-rounds = P.getOptionIntValue("+r",1);
-	
-	return 0;
+  commandLine P(argc, argv,"[+o <outfile>] [+r <rounds>] <infile>");
+  iFile = P.getArgument(0);
+  oFile = P.getOptionValue("+o");
+  rounds = P.getOptionIntValue("+r",1);	
+  return 0;
 
 } //init
 
 int run(int argc, char **argv) {
-
   D = readSequenceFromFile(iFile);
   dt = D.dt;
   switch (dt) {
