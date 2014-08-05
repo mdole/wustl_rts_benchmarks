@@ -24,12 +24,14 @@ inputs:
 	./sequenceData/almostSortedSeq -t double 100000 ./sequenceData/data/almostSortedSeq-size4
 	./sequenceData/almostSortedSeq -t double 1000000 ./sequenceData/data/almostSortedSeq-size5
 	./sequenceData/almostSortedSeq -t double 10000000 ./sequenceData/data/almostSortedSeq-size6
-	./sequenceData/trigramSeq 100 ./sequenceData/data/trigramSeq-size1
-	./sequenceData/trigramSeq 1000 ./sequenceData/data/trigramSeq-size2
-	./sequenceData/trigramSeq 10000 ./sequenceData/data/trigramSeq-size3
-	./sequenceData/trigramSeq 100000 ./sequenceData/data/trigramSeq-size4
-	./sequenceData/trigramSeq 1000000 ./sequenceData/data/trigramSeq-size5
-	./sequenceData/trigramSeq 10000000 ./sequenceData/data/trigramSeq-size6
+	cd ./sequenceData/data; \
+	../trigramSeq 100 ./trigramSeq-size1; \
+	../trigramSeq 1000 ./trigramSeq-size2; \
+	../trigramSeq 10000 ./trigramSeq-size3; \
+	../trigramSeq 100000 ./trigramSeq-size4; \
+	../trigramSeq 1000000 ./trigramSeq-size5; \
+	../trigramSeq 10000000 ./trigramSeq-size6; \
+	cd ..; \
 
 clean:
 	make clean-keepinputs
