@@ -31,7 +31,7 @@ inputs:
 	../trigramSeq 100000 ./trigramSeq-size4; \
 	../trigramSeq 1000000 ./trigramSeq-size5; \
 	../trigramSeq 10000000 ./trigramSeq-size6; \
-	cd ..; \
+	cd ..; cd ..; \
 
 clean:
 	make clean-keepinputs

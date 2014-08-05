@@ -37,7 +37,7 @@ inputs:
 	../trigramSeq 100000 ./size4-temp; \
 	../trigramSeq 1000000 ./size5-temp; \
 	../trigramSeq 10000000 ./size6-temp; \
-	cd ..; \
+	cd ..; cd ..; \
 	./sequenceData/addDataSeq -t int 100 ./sequenceData/data/size1-temp ./sequenceData/data/trigramSeq2-size1
 	./sequenceData/addDataSeq -t int 1000 ./sequenceData/data/size2-temp ./sequenceData/data/trigramSeq2-size2
 	./sequenceData/addDataSeq -t int 10000 ./sequenceData/data/size3-temp ./sequenceData/data/trigramSeq2-size3
