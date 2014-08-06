@@ -1,4 +1,4 @@
-This benchmark suite is adapted from the CMU PBBS benchmark suite, located
+These benchmarks are adapted from the CMU PBBS benchmark suite, located
 at http://www.cs.cmu.edu/~pbbs/index.html This README is inspired by the
 README included with those benchmarks, and there are many similarities
 between the two, but we felt it necessary to update the README to better
@@ -19,10 +19,11 @@ QUICK-START:
 		2. Run the following:
 		   ./clustering_launcher <taskset_name>
 		   where <taskset_name> is a .rtpt or .rtps file (but don't include
-		   the .rtpt or .rtps when running with the clustering launcher).
+		   the .rtpt or .rtps extensions when running with the clustering launcher).
 		   Note: several example tasksets are included in the tasksets
 		   directory within runtime. To create your own, see the 
-		   documentation included with this suite.
+		   documentation included with the RT-OpenMP real-time concurrency
+		   platform (curently located at prt.wustl.edu in the Source Code section).
 	3. To run an individual benchmark (not in real-time):
 		1. cd into benchmarks/<benchmark> where <benchmark> is the one you
 		   want to run.
@@ -46,7 +47,7 @@ benchmarks:
     This directory contains the source code for all of the benchmarks and
 	the task versions of them. Each directory (with the exception of nBody
 	and DelaunayTriangulation, discussed below) has a common folder, a
-	data generation folder, a floder containing a serial implementation of 
+	data generation folder, a folder containing a serial implementation of 
 	the benchmark, and a Cilkplus and OpenMP implementation of each 
 	algorithm, labeled as <benchmark>-cilkp and <benchmark>-omp 
 	respectively. For descriptions of the contents of those folders, see
@@ -54,7 +55,7 @@ benchmarks:
 runtime:
  	Contains everything necessary to run the clustering launcher, as well
 	as the tasksets folder, which contains sample tasksets for each
-	benchmark as well as tasksets that combine a few benchmarks.
+	benchmark and tasksets that combine a few benchmarks.
 
 *****************************
 MAKING THE INPUT FILES
@@ -83,8 +84,7 @@ Note on DelaunayTriangulation:
 	meant to be used by the real-time framework.
 
 Note on nBody:
-	Due to issues with OpenMP optimization [??], we did not include an
-	OpenMP implementation of nBody.
+	We have not yet included an OpenMP implementation of nBody.
 
 Note on comparisonSort:
 	For stlParallelSort, the folder might need to be named
@@ -104,7 +104,8 @@ Note on comparisonSort:
 	"<bnchmrk>Check <inputFile> <outputFile>".
 
 <benchmark>/common/testInputs:
-	A script that runs the benchmark on all the inputs.  This file
+	A script that runs the benchmark on all the inputs.  The reason for this 
+	file is so that it can be copied over into implementations.  This file
 	includes the list of input files that are part of this benchmark.
 	It is typically copied over to the directory for each implementation.
 
