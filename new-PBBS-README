@@ -32,6 +32,8 @@ QUICK-START:
 		   several input files, or you can generate your own input files
 		   using the instructions at
 		   http://www.cs.cmu.edu/~pbbs/benchmarks.html
+		   Then just run ./<bnchmrk> (the shortened version of <benchmark>
+		   on the input file.
 
 *****************************
 DIRECTORY STRUCTURE
@@ -55,9 +57,25 @@ runtime:
 	benchmark as well as tasksets that combine a few benchmarks.
 
 *****************************
+MAKING THE INPUT FILES
+*****************************
+After typing make, simply type "make inputs" in the toplevel directory (the
+one containing this README) to make input files for use with the benchmarks
+and tasksets. The inputs are labeled with their type and size, where the
+sizes are as follows:
+size6: n = 10,000,000
+size5: n = 1,000,000
+size4: n = 100,000
+size3: n = 10,000
+size2: n = 1,000
+size1: n = 100
+For more information on specific input types and uses, see the PBBS website
+at http://www.cs.cmu.edu/~pbbs/index.html
+
+*****************************
 NOTES ON BENCHMARKS
 *****************************
-For descriptions of the specific benchmarks, see
+For descriptions of the specific benchmarks, including input and output, see
 http://www.cs.cmu.edu/~pbbs/benchmarks.html
 
 Note on DelaunayTriangulation:
@@ -67,6 +85,11 @@ Note on DelaunayTriangulation:
 Note on nBody:
 	Due to issues with OpenMP optimization [??], we did not include an
 	OpenMP implementation of nBody.
+
+Note on comparisonSort:
+	For stlParallelSort, the folder might need to be named
+	stlParallelSort-omp. It requires OpenMP to compile, but we are not
+	sure if it's an OpenMP implementation.
 
 <benchmark>/common:
     Code and other files that are common across implementations of the
