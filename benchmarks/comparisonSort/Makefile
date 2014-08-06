@@ -4,6 +4,7 @@ all:
 	cd sampleSort-omp; make; cd ..; \
 	cd sequenceData; make; cd ..; \
 	cd serialSort; make; cd ..; \
+	cd stlParallelSort; make; cd ..; \
 
 inputs:
 	./sequenceData/randomSeq -t double 100 ./sequenceData/data/randomSeq-size1
@@ -43,6 +44,7 @@ clean-keepinputs:
 	cd sampleSort-omp; make clean; cd ..; \
 	cd sequenceData; make clean; cd ..; \
 	cd serialSort; make clean; cd ..; \
+	cd stlParallelSort; make clean; cd ..; \
 
 clean-inputs:
 	rm -f ./sequenceData/data/*-size*
