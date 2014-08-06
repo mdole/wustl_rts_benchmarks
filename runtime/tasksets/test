@@ -1,3 +1,0 @@
-#!/bin/bash
-
-../../benchmarks/comparisonSort/sampleSort-cilkp/sortTaskUtil 0 15 0 1000000 100 ../../benchmarks/comparisonSort/sequenceData/data/size5 >> comparisonSort-size5.txt
