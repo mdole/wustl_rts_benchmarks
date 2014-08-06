@@ -52,6 +52,7 @@ void shellSort(E* A, intT n, BinPred f) {
 }
 
 #define ISORT 25
+#define MINPARALLEL 670000
 
 template <class E, class BinPred>
 E median(E a, E b, E c, BinPred f) {
@@ -63,6 +64,7 @@ E median(E a, E b, E c, BinPred f) {
 //  and uses insertionSort for small inputs
 template <class E, class BinPred, class intT>
 void quickSort(E* A, intT n, BinPred f) {
+  omp_set_nested(1);
   if (n < ISORT) insertionSort(A, n, f);
   else {
     //E p = std::__median(A[n/4],A[n/2],A[(3*n)/4],f);
@@ -82,9 +84,22 @@ void quickSort(E* A, intT n, BinPred f) {
       if (f(*M,p)) swap(*M,*(L++));
       M++;
     }
-    cilk_spawn quickSort(A, L-A, f);
-    quickSort(M, A+n-M, f); // Exclude all elts that equal pivot
-    cilk_sync;
+    if(n < MINPARALLEL){
+      quickSort(A, L-A, f);
+      quickSort(M, A+n-M, f);
+    } else{
+    	#pragma omp parallel sections
+    	{
+          #pragma omp section
+          {
+            quickSort(A, L-A, f);
+          }
+          #pragma omp section
+          {
+            quickSort(M, A+n-M, f); // Exclude all elts that equal pivot
+          }
+    	}
+    }
   }
 }
 

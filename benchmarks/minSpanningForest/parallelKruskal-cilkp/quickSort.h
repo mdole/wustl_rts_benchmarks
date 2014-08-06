@@ -52,7 +52,7 @@ void shellSort(E* A, intT n, BinPred f) {
 }
 
 #define ISORT 25
-
+#define MINPARALLEL 80000
 template <class E, class BinPred>
 E median(E a, E b, E c, BinPred f) {
   return  f(a,b) ? (f(b,c) ? b : (f(a,c) ? c : a)) 
@@ -82,9 +82,14 @@ void quickSort(E* A, intT n, BinPred f) {
       if (f(*M,p)) swap(*M,*(L++));
       M++;
     }
-    cilk_spawn quickSort(A, L-A, f);
-    quickSort(M, A+n-M, f); // Exclude all elts that equal pivot
-    cilk_sync;
+    if( n < MINPARALLEL){
+    	quickSort(A, L-A, f);
+    	quickSort(M, A+n-M, f); // Exclude all elts that equal pivot
+    } else {
+    	cilk_spawn quickSort(A, L-A, f);
+    	quickSort(M, A+n-M, f); // Exclude all elts that equal pivot
+    	cilk_sync;
+    }
   }
 }
 
