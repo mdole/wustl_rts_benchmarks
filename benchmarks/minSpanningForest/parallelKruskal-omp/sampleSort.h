@@ -67,7 +67,8 @@ void sampleSort (E* A, intT n, BinPred f) {
     //cout << "n=" << n << " num_segs=" << numSegs << endl;
 
     // generate samples with oversampling
-    parallel_for (intT j=0; j< sampleSetSize; ++j) {
+    #pragma omp parallel for
+    for (intT j=0; j< sampleSetSize; ++j) {
       intT o = utils::hash(j)%n;
       sampleSet[j] = A[o]; 
     }
@@ -77,7 +78,8 @@ void sampleSort (E* A, intT n, BinPred f) {
 
     // subselect samples at even stride
     E* pivots = newA(E,numSegs-1);
-    parallel_for (intT k=0; k < numSegs-1; ++k) {
+    #pragma omp parallel for
+    for (intT k=0; k < numSegs-1; ++k) {
       intT o = overSample*k;
       pivots[k] = sampleSet[o];
     }
@@ -90,7 +92,8 @@ void sampleSort (E* A, intT n, BinPred f) {
     intT *offsetB = newA(intT, numR*numSegs);
 
     // sort each row and merge with samples to get counts
-    parallel_for (intT r = 0; r < numR; ++r) {
+    #pragma omp parallel for
+    for (intT r = 0; r < numR; ++r) {
       intT offset = r * rowSize;
       intT size =  (r < numR - 1) ? rowSize : n - offset;
       sampleSort(A+offset, size, f);
@@ -103,13 +106,18 @@ void sampleSort (E* A, intT n, BinPred f) {
     transpose<intT,intT>(segSizes, offsetB).trans(numR, numSegs);
     sequence::scan(offsetB, offsetB, numR*numSegs, plus<intT>(),(intT)0);
     blockTrans<E,intT>(A, B, offsetA, offsetB, segSizes).trans(numR, numSegs);
-    {parallel_for (intT i=0; i < n; ++i) A[i] = B[i];}
+    {
+      #pragma omp parallel for
+      for (intT i=0; i < n; ++i) A[i] = B[i];
+    }
     //nextTime("transpose");
 
     free(B); free(offsetA); free(segSizes);
 
     // sort the columns
-    {parallel_for (intT i=0; i<numSegs; ++i) {
+    {
+     #pragma omp parallel for
+     for (intT i=0; i<numSegs; ++i) {
 	intT offset = offsetB[i*numR];
 	if (i == 0) {
 	  sampleSort(A, offsetB[numR], f); // first segment

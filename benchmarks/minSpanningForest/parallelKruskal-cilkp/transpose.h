@@ -25,7 +25,7 @@
 
 #include "parallel.h"
 
-#define _TRANS_THRESHHOLD 64
+#define _TRANS_THRESHHOLD 70
 
 template <class E, class intT>
 struct transpose {
