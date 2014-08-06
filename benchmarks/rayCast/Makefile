@@ -13,10 +13,16 @@ inputs:
 	./geometryData/addRays ./geometryData/data/happyTriangles ./geometryData/data/happyRays
 
 clean:
+	make clean-keepinputs
+	make clean-inputs
+
+clean-keepinputs:
 	cd common; make clean; cd ..; \
 	cd geometryData; make clean; cd ..; \
 	cd kdTree-cilkp; make clean; cd ..; \
 	cd kdTree-omp; make clean; cd ..; \
+
+clean-inputs:
 	rm -f ./geometryData/data/angelTriangles
 	rm -f ./geometryData/data/dragonTriangles
 	rm -f ./geometryData/data/happyTriangles
