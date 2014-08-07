@@ -1,0 +1,7 @@
+0 14
+../benchmarks/comparisonSort/sampleSort-cilkp/sortTask ../benchmarks/comparisonSort/sequenceData/data/almostSortedSeq-size5
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 20
+../benchmarks/dictionary/deterministicHash-cilkp/dictTask ../benchmarks/dictionary/sequenceData/data/exptSeq-size5
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 20
+../benchmarks/removeDuplicates/deterministicHash-cilkp/remDupsTask ../benchmarks/removeDuplicates/sequenceData/data/exptSeq-size5
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 20

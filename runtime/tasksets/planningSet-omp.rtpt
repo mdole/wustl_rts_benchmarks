@@ -1,0 +1,5 @@
+0 14
+../benchmarks/convexHull/quickHull-omp/hullTask ../benchmarks/convexHull/geometryData/data/plummer-size6
+0 19700000 0 19700000 0 160000000 0 60000000 0 0 5
+../benchmarks/breadthFirstSearch/deterministicBFS-omp/BFSTask ../benchmarks/breadthFirstSearch/graphData/data/gridGraph-size5
+0 19700000 0 19700000 0 40000000 0 60000000 0 2000 20
