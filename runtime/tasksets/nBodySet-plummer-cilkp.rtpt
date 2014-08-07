@@ -1,0 +1,13 @@
+0 14
+../benchmarks/nBody/parallelCK-cilkp/nBodyTask ../benchmarks/nBody/geometryData/data/plummer-size1
+0 15000000 0 06400000 0 50000000 0 50000000 0 500 160
+../benchmarks/nBody/parallelCK-cilkp/nBodyTask ../benchmarks/nBody/geometryData/data/plummer-size2
+0 19700000 0 19700000 0 60000000 0 60000000 0 400 80
+../benchmarks/nBody/parallelCK-cilkp/nBodyTask ../benchmarks/nBody/geometryData/data/plummer-size3
+0 19700000 0 19700000 0 60000000 0 60000000 0 300 40
+../benchmarks/nBody/parallelCK-cilkp/nBodyTask ../benchmarks/nBody/geometryData/data/plummer-size4
+0 19700000 0 19700000 0 60000000 0 60000000 0 200 20
+../benchmarks/nBody/parallelCK-cilkp/nBodyTask ../benchmarks/nBody/geometryData/data/plummer-size5
+0 19700000 0 19700000 0 60000000 0 60000000 0 100 10
+../benchmarks/nBody/parallelCK-cilkp/nBodyTask ../benchmarks/nBody/geometryData/data/plummer-size6
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 5

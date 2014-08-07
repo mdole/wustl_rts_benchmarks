@@ -1,0 +1,8 @@
+0 14
+../benchmarks/convexHull/quickHull-omp/hullTask ../benchmarks/convexHull/geometryData/data/plummer-size6
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 10
+../benchmarks/convexHull/quickHull-omp/hullTask ../benchmarks/convexHull/geometryData/data/uniform-size6
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 10
+../benchmarks/convexHull/quickHull-omp/hullTask ../benchmarks/convexHull/geometryData/data/uniform2-size6
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 10
+

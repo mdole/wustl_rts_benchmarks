@@ -1,0 +1,13 @@
+0 14
+../benchmarks/dictionary/deterministicHash-omp/dictTask ../benchmarks/dictionary/sequenceData/data/trigramSeq2-size1
+0 15000000 0 06400000 0 50000000 0 50000000 0 500 160
+../benchmarks/dictionary/deterministicHash-omp/dictTask ../benchmarks/dictionary/sequenceData/data/trigramSeq2-size2
+0 19700000 0 19700000 0 60000000 0 60000000 0 400 80
+../benchmarks/dictionary/deterministicHash-omp/dictTask ../benchmarks/dictionary/sequenceData/data/trigramSeq2-size3
+0 19700000 0 19700000 0 60000000 0 60000000 0 300 40
+../benchmarks/dictionary/deterministicHash-omp/dictTask ../benchmarks/dictionary/sequenceData/data/trigramSeq2-size4
+0 19700000 0 19700000 0 60000000 0 60000000 0 200 20
+../benchmarks/dictionary/deterministicHash-omp/dictTask ../benchmarks/dictionary/sequenceData/data/trigramSeq2-size5
+0 19700000 0 19700000 0 60000000 0 60000000 0 100 10
+../benchmarks/dictionary/deterministicHash-omp/dictTask ../benchmarks/dictionary/sequenceData/data/trigramSeq2-size6
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 5

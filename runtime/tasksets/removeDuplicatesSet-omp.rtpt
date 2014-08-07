@@ -1,0 +1,11 @@
+0 14
+../benchmarks/removeDuplicates/deterministicHash-omp/remDupsTask ../benchmarks/removeDuplicates/sequenceData/data/exptSeq-size6
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 10
+../benchmarks/removeDuplicates/deterministicHash-omp/remDupsTask ../benchmarks/removeDuplicates/sequenceData/data/randomSeq-size6
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 10
+../benchmarks/removeDuplicates/deterministicHash-omp/remDupsTask ../benchmarks/removeDuplicates/sequenceData/data/randomSeq2-size6
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 10
+../benchmarks/removeDuplicates/deterministicHash-omp/remDupsTask ../benchmarks/removeDuplicates/sequenceData/data/trigramSeq-size6
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 10
+../benchmarks/removeDuplicates/deterministicHash-omp/remDupsTask ../benchmarks/removeDuplicates/sequenceData/data/trigramSeq2-size6
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 10

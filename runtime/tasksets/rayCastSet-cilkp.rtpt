@@ -1,0 +1,7 @@
+0 14
+../benchmarks/rayCast/kdTree-cilkp/rayTask ../benchmarks/rayCast/geometryData/data/angelTriangles ../benchmarks/rayCast/geometryData/data/angelRays
+0 19700000 0 19700000 0 60000000 0 60000000 0 200 20
+../benchmarks/rayCast/kdTree-cilkp/rayTask ../benchmarks/rayCast/geometryData/data/dragonTriangles ../benchmarks/rayCast/geometryData/data/dragonRays
+0 19700000 0 19700000 0 60000000 0 60000000 0 200 20
+../benchmarks/rayCast/kdTree-cilkp/rayTask ../benchmarks/rayCast/geometryData/data/happyTriangles ../benchmarks/rayCast/geometryData/data/happyRays
+0 19700000 0 19700000 0 60000000 0 60000000 0 100 10

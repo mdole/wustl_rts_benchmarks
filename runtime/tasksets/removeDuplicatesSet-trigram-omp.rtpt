@@ -1,0 +1,13 @@
+0 14
+../benchmarks/removeDuplicates/deterministicHash-omp/remDupsTask ../benchmarks/removeDuplicates/sequenceData/data/trigramSeq-size1
+0 15000000 0 06400000 0 50000000 0 50000000 0 500 160
+../benchmarks/removeDuplicates/deterministicHash-omp/remDupsTask ../benchmarks/removeDuplicates/sequenceData/data/trigramSeq-size2
+0 19700000 0 19700000 0 60000000 0 60000000 0 400 80
+../benchmarks/removeDuplicates/deterministicHash-omp/remDupsTask ../benchmarks/removeDuplicates/sequenceData/data/trigramSeq-size3
+0 19700000 0 19700000 0 60000000 0 60000000 0 300 40
+../benchmarks/removeDuplicates/deterministicHash-omp/remDupsTask ../benchmarks/removeDuplicates/sequenceData/data/trigramSeq-size4
+0 19700000 0 19700000 0 60000000 0 60000000 0 200 20
+../benchmarks/removeDuplicates/deterministicHash-omp/remDupsTask ../benchmarks/removeDuplicates/sequenceData/data/trigramSeq-size5
+0 19700000 0 19700000 0 60000000 0 60000000 0 100 10
+../benchmarks/removeDuplicates/deterministicHash-omp/remDupsTask ../benchmarks/removeDuplicates/sequenceData/data/trigramSeq-size6
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 5

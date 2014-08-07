@@ -1,0 +1,7 @@
+0 14
+../benchmarks/breadthFirstSearch/deterministicBFS-omp/BFSTask ../benchmarks/breadthFirstSearch/graphData/data/gridGraph-size6
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 10
+../benchmarks/breadthFirstSearch/deterministicBFS-omp/BFSTask ../benchmarks/breadthFirstSearch/graphData/data/randLocalGraph-size6
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 10
+../benchmarks/breadthFirstSearch/deterministicBFS-omp/BFSTask ../benchmarks/breadthFirstSearch/graphData/data/rMatGraph-size6
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 10
