@@ -1,0 +1,7 @@
+0 14
+../benchmarks/maximalIndependentSet/incrementalMIS-omp/MISTask ../benchmarks/maximalIndependentSet/graphData/data/gridGraph-size6
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 10
+../benchmarks/maximalIndependentSet/incrementalMIS-omp/MISTask ../benchmarks/maximalIndependentSet/graphData/data/randLocalGraph-size6
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 10
+../benchmarks/maximalIndependentSet/incrementalMIS-omp/MISTask ../benchmarks/maximalIndependentSet/graphData/data/rMatGraph-size6
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 10
