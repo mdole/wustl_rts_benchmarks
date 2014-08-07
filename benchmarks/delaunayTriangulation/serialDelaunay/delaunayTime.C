@@ -40,11 +40,11 @@ void timeDelaunay(point2d* pts, intT n, int rounds, char* outFile) {
   triangles<point2d> R;
   for (int i=0; i < rounds; i++) {
     if (i != 0) R.del();
-    startTime();
+    //startTime();
     R = delaunay(pts, n);
-    nextTimeN();
+    //nextTimeN();
   }
-  cout << endl;
+  //cout << endl;
 
   if (outFile != NULL) writeTrianglesToFile(R, outFile);
   R.del();

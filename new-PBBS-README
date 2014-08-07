@@ -9,7 +9,10 @@ Assumptions:
 	 http://www.cilkplus.org/build-gcc-cilkplus
 	-cilkplus-install is in the user's home directory
 	-After generating the inputs, this suite will take up roughly 18GB of
-	 space. Make sure you have sufficient room in your hard drive.
+	 space. Make sure you have sufficient room on your hard drive.
+	-Some of the lower-level makefiles will not run properly unless
+	 the toplevel makefile has been run. We recommend running the
+	 toplevel makefile immediately after downloading the benchmarks.
 
 QUICK-START:
 	1. Run make in the directory containing this README (the toplevel
@@ -44,7 +47,7 @@ Makefile:
 	as the clustering launcher. Functions by running "make" in runtime and
 	in the top level of each individual benchmark.
 benchmarks:
-    This directory contains the source code for all of the benchmarks and
+	This directory contains the source code for all of the benchmarks and
 	the task versions of them. Each directory (with the exception of nBody
 	and DelaunayTriangulation, discussed below) has a common folder, a
 	data generation folder, a folder containing a serial implementation of 
@@ -64,12 +67,13 @@ After typing make, simply type "make inputs" in the toplevel directory (the
 one containing this README) to make input files for use with the benchmarks
 and tasksets. The inputs are labeled with their type and size, where the
 sizes are as follows:
-size6: n = 10,000,000
-size5: n = 1,000,000
-size4: n = 100,000
-size3: n = 10,000
-size2: n = 1,000
-size1: n = 100
+size6: n = recommendedSize
+size5: n = recommendedSize/10
+size4: n = recommendedSize/100
+size3: n = recommendedSize/1,000
+size2: n = recommendedSize/10,000
+size1: n = recommendedSize/100,000
+For most benchmarks, recommndedSize is 10,000,000.
 For more information on specific input types and uses, see the PBBS website
 at http://www.cs.cmu.edu/~pbbs/index.html
 
@@ -92,8 +96,8 @@ Note on comparisonSort:
 	sure if it's an OpenMP implementation.
 
 <benchmark>/common:
-    Code and other files that are common across implementations of the
-    benchmark, e.g. the check code.
+	Code and other files that are common across implementations of the
+	benchmark, e.g. the check code.
 
 <benchmark>/common/<bnchmrk>Check.C:
 	Code for checking the correctness of the output for the benchmark.
@@ -114,34 +118,34 @@ Note on comparisonSort:
 	benchmark implementation code is written in C or can be linked with C.
 	Otherwise the benchmark implementation might require its own driver.
 
-<benchmark>/<implementation>/:
+<benchmark>/<implementation>-<parallelLanguageExtension>/:
 	These directories contain a particular implementation of the benchmark,
-	for example "comparisonSort/sampleSort/".
+	for example "comparisonSort/sampleSort-cilkp/".
 
 <benchmark>/<implementation>/Makefile:
 	Running "make" should make the benchmark code and generate a file
-	called <bnchmrk>.  This includes linking in files from "common" and
+	called <bnchmrk> as well as files called <bnchmrk>Task and
+	<bnchmrk>TaskUtil.  This includes linking in files from "common" and
 	"benchmark/<common>" if needed.
 
 <benchmark>/<implementation>/testInputs:
-	This file might not be in the directory before the "make", but should
-	be copied over by the make.  It is used to run the benchmark on all
+	This file is used to run the benchmark on all
 	the test inputs and check the results for correctness.  The
 	benchmark can also be run on its own on a single input without testing 
 	by using <benchmark>/<implementation>/<bnchmrk> <infile>.  Here 
 	<bnchmrk> is the same abbreviation as used in the common directory 
 	(e.g. "isort"). For example in the directory 
-	"comparisonSort/sampleSort", run:
-	./sort ../sequenceData/data/randomSeq_10000000_double
+	"comparisonSort/sampleSort-cilkp", run:
+	./sort ../sequenceData/data/randomSeq-size6
 	which will just print out the runtime, and perhaps some statistics,
 	Using the -o option:
-	./sort -o <fname> ../sequenceData/data/randomSeq_10000000_double
+	./sort -o <fname> ../sequenceData/data/randomSeq-size6
 	will output the result to the file <fname>, which can then be tested
 	with the check program:
-	../common/<bnchmrk>Check ../sequenceData/data/randomSeq_10000000_double <fname>
+	../common/<bnchmrk>Check ../sequenceData/data/randomSeq-size6 <fname>
 	Note, however, that the input file might not exist, in which case
-	go to the "data" directory and:
-	make randomSeq_10000000_double
+	go to the toplevel of the benchmark or the overall toplevel and type
+	make input
 
 <benchmark>/<implementation>/<bnchmrk>Task.C:
 	The source code for the the task that can be executed by the clustering
