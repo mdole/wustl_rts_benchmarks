@@ -1,13 +1,13 @@
 0 14
-../benchmarks/nBody/parallelCK-cilkp/nBodyTask ../benchmarks/nBody/geometryData/data/uniform2-size1
+../benchmarks/nBody/parallelCK-cilkp/nbodyTask ../benchmarks/nBody/geometryData/data/uniform2-size1
 0 15000000 0 06400000 0 50000000 0 50000000 0 500 160
-../benchmarks/nBody/parallelCK-cilkp/nBodyTask ../benchmarks/nBody/geometryData/data/uniform2-size2
+../benchmarks/nBody/parallelCK-cilkp/nbodyTask ../benchmarks/nBody/geometryData/data/uniform2-size2
 0 19700000 0 19700000 0 60000000 0 60000000 0 400 80
-../benchmarks/nBody/parallelCK-cilkp/nBodyTask ../benchmarks/nBody/geometryData/data/uniform2-size3
+../benchmarks/nBody/parallelCK-cilkp/nbodyTask ../benchmarks/nBody/geometryData/data/uniform2-size3
 0 19700000 0 19700000 0 60000000 0 60000000 0 300 40
-../benchmarks/nBody/parallelCK-cilkp/nBodyTask ../benchmarks/nBody/geometryData/data/uniform2-size4
+../benchmarks/nBody/parallelCK-cilkp/nbodyTask ../benchmarks/nBody/geometryData/data/uniform2-size4
 0 19700000 0 19700000 0 60000000 0 60000000 0 200 20
-../benchmarks/nBody/parallelCK-cilkp/nBodyTask ../benchmarks/nBody/geometryData/data/uniform2-size5
+../benchmarks/nBody/parallelCK-cilkp/nbodyTask ../benchmarks/nBody/geometryData/data/uniform2-size5
 0 19700000 0 19700000 0 60000000 0 60000000 0 100 10
-../benchmarks/nBody/parallelCK-cilkp/nBodyTask ../benchmarks/nBody/geometryData/data/uniform2-size6
+../benchmarks/nBody/parallelCK-cilkp/nbodyTask ../benchmarks/nBody/geometryData/data/uniform2-size6
 0 19700000 0 19700000 0 60000000 0 60000000 0 0 5
