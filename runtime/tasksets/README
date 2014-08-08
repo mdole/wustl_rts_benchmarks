@@ -1,0 +1,43 @@
+In this directory we provide the user with a sampling of potentially
+helpful tasksets.  For instructions on how to use these tasksets
+with the clustering launcher, please see the RT-OpenMP project at
+Washington University in St. Louis (currently hosted at prt.wustl.edu).
+
+NOTE: These tasksets in there current state are filled in with arbitrary
+parameters.  They are merely intended as templates.  The parameters of 
+these tasksets (work, span, period, deadline, etc.) need to be updated
+before use.
+
+In the elementary_tasksets subdirectory we provie very simple tasksets.
+Each of these tasksets runs some combination of one particular task.
+These tasksets are helpful for analyzing the real-time performance of a 
+particular task and verifying that it is functioning properly.
+
+In the main tasksets directory we have tasksets that combine a variety 
+of different tasks.  These are intended to be more realistic models of
+real-world real-time computations.  Some of these tasksets are based on 
+similarity of origin of the tasks, based on the fact that computations 
+from similar fields are often needed together.  Others are based on some
+particular real-time application where several of the tasks from varying 
+fields might be potentially relevant.
+The combined tasksets are as follows:
+
+ - sequenceSet - collection of sequence related computations
+ - graphSet - collection of graph related computations
+ - geometrySet - collection of geometry and graphics related computations
+ 
+ - networkSet - algorithms potentially relevant to
+ 		to re-routing of ad-hoc and sensor networks (in case
+ 		of node failure)
+ - avoidanceSet - relevant to collision avoidance, consists of
+ 		  deduplicating input data and performing geometric
+ 		  computations
+ - gameSet - models real-time simulation and animation (often used 
+ 	     for rendering realistically in games)
+ - planningSet - computations of the type relevant to motion planning,
+ 		 including geometric analysis of obstacles and search
+ 		 for path finding
+
+
+We hope that these tasksets will help form a starting point, but users
+should feel free to create new tasksets as they see fit.

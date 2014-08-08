@@ -1,0 +1,7 @@
+0 14
+../benchmarks/convexHull/quickHull-omp/hullTask ../benchmarks/convexHull/geometryData/data/plummer-size5
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 20
+../benchmarks/delaunayRefine/incrementalRefine-omp/refineTask ../benchmarks/delaunayRefine/geometryData/data/plummer-size5
+0 19700000 0 19700000 0 60000000 0 60000000 0 0 20
+../benchmarks/rayCast/kdTree-omp/rayTask ../benchmarks/rayCast/geometryData/data/angelTriangles ../benchmarks/rayCast/geometryData/data/angelRays
+0 19700000 0 19700000 0 60000000 0 60000000 0 200 20

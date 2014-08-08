@@ -73,7 +73,7 @@ size4: n = recommendedSize/100
 size3: n = recommendedSize/1,000
 size2: n = recommendedSize/10,000
 size1: n = recommendedSize/100,000
-For most benchmarks, recommndedSize is 10,000,000.
+For most benchmarks, recommendedSize is 10,000,000.
 For more information on specific input types and uses, see the PBBS website
 at http://www.cs.cmu.edu/~pbbs/index.html
 
