@@ -3,12 +3,12 @@ helpful tasksets.  For instructions on how to use these tasksets
 with the clustering launcher, please see the RT-OpenMP project at
 Washington University in St. Louis (currently hosted at prt.wustl.edu).
 
-NOTE: These tasksets in there current state are filled in with arbitrary
+NOTE: These tasksets in their current state are filled in with arbitrary
 parameters.  They are merely intended as templates.  The parameters of 
 these tasksets (work, span, period, deadline, etc.) need to be updated
-before use.
+before use. This also applies to the elementary_tasksets directory.
 
-In the elementary_tasksets subdirectory we provie very simple tasksets.
+In the elementary_tasksets directory we provide very simple tasksets.
 Each of these tasksets runs some combination of one particular task.
 These tasksets are helpful for analyzing the real-time performance of a 
 particular task and verifying that it is functioning properly.
@@ -20,12 +20,20 @@ similarity of origin of the tasks, based on the fact that computations
 from similar fields are often needed together.  Others are based on some
 particular real-time application where several of the tasks from varying 
 fields might be potentially relevant.
+
+TO RUN ALL TASKSETS:
+Run the runTasksets script in the runtime directory. It will run all
+of the tasksets in both elementary_tasksets and tasksets, and will
+therefore take quite a while. The results of each run are printed to a
+file called <taskset>.out in the directory containing the tasksets.
+It is an extremely simple script, designed to be easily modifiable--we
+highly encourage you to alter it according to your needs.
+
 The combined tasksets are as follows:
 
- - sequenceSet - collection of sequence related computations
- - graphSet - collection of graph related computations
- - geometrySet - collection of geometry and graphics related computations
- 
+ - sequenceSet - collection of sequence-related computations
+ - graphSet - collection of graph-related computations
+ - geometrySet - collection of geometry- and graphics-related computations
  - networkSet - algorithms potentially relevant to
  		to re-routing of ad-hoc and sensor networks (in case
  		of node failure)

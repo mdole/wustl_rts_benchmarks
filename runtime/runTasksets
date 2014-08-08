@@ -1,11 +1,11 @@
 #!/bin/bash
 
-for j in elementary_tasksets/*
+for j in elementary_tasksets2/*.rtpt
 	do
 		./clustering_launcher ${j%.rtpt} > ${j%.rtpt}.out 2>&1
 	done
 
-for f in tasksets/*
+for f in tasksets/*.rtpt
 	do
 		./clustering_launcher ${f%.rtpt} > ${f%.rtpt}.out 2>&1
 	done

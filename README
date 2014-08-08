@@ -1,17 +1,159 @@
-THIS IS NOT A COMPLETE README YET.
+These benchmarks are adapted from the CMU PBBS benchmark suite, located
+at http://www.cs.cmu.edu/~pbbs/index.html This README is inspired by the
+README included with those benchmarks, and there are many similarities
+between the two, but we felt it necessary to update the README to better
+reflect the changes we made to the suite.
 
-NOTES
+Assumptions:
+	-The user is using the Cilkplus version of gcc/g++, located at
+	 http://www.cilkplus.org/build-gcc-cilkplus
+	-cilkplus-install is in the user's home directory
+	-After generating the inputs, this suite will take up roughly 18GB of
+	 space. Make sure you have sufficient room on your hard drive.
+	-Some of the lower-level makefiles will not run properly unless
+	 the toplevel makefile has been run. We recommend running the
+	 toplevel makefile immediately after downloading the benchmarks.
 
-cilkplus-install MUST be in the home directory of the logged-in user.
+QUICK-START:
+	1. Run make and make inputs in the directory containing this README (the toplevel
+	   directory)
+	2. To run a taskset:
+		1. cd into the runtime directory
+		2. Run the following:
+		   ./clustering_launcher <taskset_name>
+		   where <taskset_name> is a .rtpt or .rtps file (but don't include
+		   the .rtpt or .rtps extensions when running with the clustering launcher).
+		   Note: several example tasksets are included in the tasksets
+		   directory within runtime. To create your own, see the 
+		   documentation included with the RT-OpenMP real-time concurrency
+		   platform (curently located at prt.wustl.edu in the Source Code section).
+		   And for more information on the included tasksets, see the README in the
+		   tasksets directory.
+	3. To run an individual benchmark (not in real-time):
+		1. cd into benchmarks/<benchmark> where <benchmark> is the one you
+		   want to run.
+		2. cd into <benchmark>-omp or <benchmark>-cilkp, depending on
+		   whether you want to run the OpenMP or Cilkplus version
+		3. You can either run ./testInputs, which runs the benchmark on
+		   several input files, or you can generate your own input files
+		   using the instructions at
+		   http://www.cs.cmu.edu/~pbbs/benchmarks.html
+		   Then just run ./<bnchmrk> (the shortened version of <benchmark>
+		   on the input file.
 
-cd into each benchmark and type "make" (note: NOT sudo make) to make the benchmark.
+*****************************
+DIRECTORY STRUCTURE
+*****************************
+Makefile:
+	Makes all of the executable benchmarks and associated tasks, as well
+	as the clustering launcher. Functions by running "make" in runtime and
+	in the top level of each individual benchmark.
+benchmarks:
+	This directory contains the source code for all of the benchmarks and
+	the task versions of them. Each directory (with the exception of nBody
+	and DelaunayTriangulation, discussed below) has a common folder, a
+	data generation folder, a folder containing a serial implementation of 
+	the benchmark, and a Cilkplus and OpenMP implementation of each 
+	algorithm, labeled as <benchmark>-cilkp and <benchmark>-omp 
+	respectively. For descriptions of the contents of those folders, see
+	the text below (largely taken from PBBS README).
+runtime:
+ 	Contains everything necessary to run the clustering launcher, as well
+	as the tasksets folder, which contains sample tasksets for each
+	benchmark and tasksets that combine a few benchmarks.
 
-The input files (placed into each benchmark's data folder by the generate-inputs script) are based on the FIRST SET of recommendations (e.g., randomSeq -t double <n> <filename> for comparisonSort) given on each benchmark's page, accessible from http://www.cs.cmu.edu/~pbbs/benchmarks.html. The filename is simply "size#", where # is a (currently) single-digit number. Each size is 10 times bigger than the size before it, and size 6 represents the recommended value of n on the benchmark's page as of 2014-07-07. Note that the files used for actual real-time applications will likely be smaller than size 6, at least with current technology.
+*****************************
+MAKING THE INPUT FILES
+*****************************
+After typing make, simply type "make inputs" in the toplevel directory (the
+one containing this README) to make input files for use with the benchmarks
+and tasksets. The inputs are labeled with their type and size, where the
+sizes are as follows:
+size6: n = recommendedSize
+size5: n = recommendedSize/10
+size4: n = recommendedSize/100
+size3: n = recommendedSize/1,000
+size2: n = recommendedSize/10,000
+size1: n = recommendedSize/100,000
+For most benchmarks, recommendedSize is 10,000,000.
+For more information on specific input types and uses, see the PBBS website
+at http://www.cs.cmu.edu/~pbbs/index.html
 
-Make inputs assumes the benchmark set has already been made.
+Note: rayCast doesn't follow this scheme because it is run on three
+particular meshes. You can find descriptions of the meshes at 
+http://www.cs.cmu.edu/~pbbs/benchmarks/rayCast.html
+ 
+*****************************
+NOTES ON BENCHMARKS
+*****************************
+For descriptions of the specific benchmarks, including input and output, see
+http://www.cs.cmu.edu/~pbbs/benchmarks.html
 
-In each benchmark:
-car: Create And Run
-usage: car <cilkp|omp> <CORES> <BUCKETNS> <NUMTIMES> <N>
-Uses Utilization Calculator
-Assumes program is already made, make inputs not necessary
+Note on DelaunayTriangulation:
+	Only included in the suite because DelaunayRefine needs it to run. Not
+	meant to be used by the real-time framework.
+
+Note on nBody:
+	We have not yet included an OpenMP implementation of nBody.
+
+Note on comparisonSort:
+	For stlParallelSort, the folder might need to be named
+	stlParallelSort-omp. It requires OpenMP to compile, but we are not
+	sure if it's an OpenMP implementation.
+
+<benchmark>/common:
+	Code and other files that are common across implementations of the
+	benchmark, e.g. the check code.
+
+<benchmark>/common/<bnchmrk>Check.C:
+	Code for checking the correctness of the output for the benchmark.
+	<bnchmrk> is typically an abbreviation for <benchmark>, e.g. "isort" 
+	is short for "integerSort", and hence the file 
+	integerSort/common/isortCheck.C. Running "make" will typically make 
+	the check file. It is then used in the form
+	"<bnchmrk>Check <inputFile> <outputFile>".
+
+<benchmark>/common/testInputs:
+	A script that runs the benchmark on all the inputs.  The reason for this 
+	file is so that it can be copied over into implementations.  This file
+	includes the list of input files that are part of this benchmark.
+	It is typically copied over to the directory for each implementation.
+
+<benchmark>/common/<bnchmrk>Time.C:
+	This is a driver for running the benchmark.  This can be used if the
+	benchmark implementation code is written in C or can be linked with C.
+	Otherwise the benchmark implementation might require its own driver.
+
+<benchmark>/<implementation>-<parallelLanguageExtension>/:
+	These directories contain a particular implementation of the benchmark,
+	for example "comparisonSort/sampleSort-cilkp/".
+
+<benchmark>/<implementation>/Makefile:
+	Running "make" should make the benchmark code and generate a file
+	called <bnchmrk> as well as files called <bnchmrk>Task and
+	<bnchmrk>TaskUtil.  This includes linking in files from "common" and
+	"benchmark/<common>" if needed.
+
+<benchmark>/<implementation>/testInputs:
+	This file is used to run the benchmark on all
+	the test inputs and check the results for correctness.  The
+	benchmark can also be run on its own on a single input without testing 
+	by using <benchmark>/<implementation>/<bnchmrk> <infile>.  Here 
+	<bnchmrk> is the same abbreviation as used in the common directory 
+	(e.g. "isort"). For example in the directory 
+	"comparisonSort/sampleSort-cilkp", run:
+	./sort ../sequenceData/data/randomSeq-size6
+	which will just print out the runtime, and perhaps some statistics,
+	Using the -o option:
+	./sort -o <fname> ../sequenceData/data/randomSeq-size6
+	will output the result to the file <fname>, which can then be tested
+	with the check program:
+	../common/<bnchmrk>Check ../sequenceData/data/randomSeq-size6 <fname>
+	Note, however, that the input file might not exist, in which case
+	go to the toplevel of the benchmark or the overall toplevel and type
+	make input
+
+<benchmark>/<implementation>/<bnchmrk>Task.C:
+	The source code for the the task that can be executed by the clustering
+	launcher using a taskset. Largely rearranged code from <bnchmrk>Time.C.
+
