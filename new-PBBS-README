@@ -15,7 +15,7 @@ Assumptions:
 	 toplevel makefile immediately after downloading the benchmarks.
 
 QUICK-START:
-	1. Run make in the directory containing this README (the toplevel
+	1. Run make and make inputs in the directory containing this README (the toplevel
 	   directory)
 	2. To run a taskset:
 		1. cd into the runtime directory
