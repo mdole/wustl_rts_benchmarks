@@ -77,6 +77,10 @@ For most benchmarks, recommndedSize is 10,000,000.
 For more information on specific input types and uses, see the PBBS website
 at http://www.cs.cmu.edu/~pbbs/index.html
 
+Note: rayCast doesn't follow this scheme because it is run on three
+particular meshes. You can find descriptions of the meshes at 
+http://www.cs.cmu.edu/~pbbs/benchmarks/rayCast.html
+ 
 *****************************
 NOTES ON BENCHMARKS
 *****************************
